@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/1.Linux Temelleri Giriş.md",
+                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/2.Linux Dağıtımları.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Linux Temelleri Giriş"
+              "title": "2.Linux Dağıtımları"
             }
           }
         ]
@@ -230,6 +230,8 @@
   "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/3.Linux Kabuğu (Shell).md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/2.Linux Dağıtımları.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/1.Linux Temelleri Giriş.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri/3.Simetrik Şifreleme.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri/2.Kriptografi ve Kriptoanaliz.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri/8.Kriptoanaliz Teknikleri.md",
@@ -253,8 +255,6 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/4.Windows'u Konfigüre Etme.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/3.Windows'ta hizmetler ve işlemler.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/2.Giriş.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/1.Windows'un Mimarisi.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/1.Linux Temelleri Giriş.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4. Windows Komut Satırı Kullanımı",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri",
