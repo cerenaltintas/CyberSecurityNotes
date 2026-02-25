@@ -133,16 +133,8 @@ user@hackerbox:~$ sudo apt dist-upgrade
 
 4\. Kaldırma
 
--   **
-    
-    remove
-    
-    **: Programı kaldırır, ayarları saklar.
--   **
-    
-    purge
-    
-    **: Her şeyi (ayarlar dahil) siler.
+-  ** remove **: Programı kaldırır, ayarları saklar.
+-   ** purge **: Her şeyi (ayarlar dahil) siler.
 
 ```auto
 user@hackerbox:~$ sudo apt remove htop
@@ -185,15 +177,7 @@ sudo apt autoremove
 
 ### DPKG (Debian Package)
 
-İnternetten indirdiğiniz bir
-
-.deb
-
-dosyasını (örneğin Discord, Google Chrome) kurmak için kullanılır.
-
-apt
-
-bunu yapamaz.
+İnternetten indirdiğiniz bir .deb dosyasını (örneğin Discord, Google Chrome) kurmak için kullanılır. apt bunu yapamaz.
 
 **Örnek Senaryo: Discord Kurulumu**
 

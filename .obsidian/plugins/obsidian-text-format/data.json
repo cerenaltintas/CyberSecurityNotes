@@ -51,11 +51,11 @@
     },
     {
       "id": "split-lines-by-blank",
-      "name": "Split line(s) by blanks",
+      "name": "crn",
       "data": [
         {
-          "search": " ",
-          "replace": "\\n"
+          "search": " \\n+",
+          "replace": " "
         }
       ]
     }
@@ -93,7 +93,7 @@
     },
     "split-lines-by-blank": {
       "id": "split-lines-by-blank",
-      "modified": false,
+      "modified": true,
       "data": [
         {
           "search": " ",
