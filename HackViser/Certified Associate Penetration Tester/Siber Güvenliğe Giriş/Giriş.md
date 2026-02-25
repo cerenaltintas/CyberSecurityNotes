@@ -5,4 +5,5 @@ Bilgi Güvenliği İlkeleri: CIA Üçlüsü
 **Bütünlük (Integrity):** Bilginin doğru ve değiştirilmeden kalması, yanlışlıkla ya da kasıtlı olarak bozulmaması anlamına gelir.
 
 **Erişilebilirlik (Availability):** Bilginin ihtiyaç duyulduğunda, yetkili kullanıcılar tarafından kolayca erişilebilir olmasıdır.
-![[Pasted image 20260225191645.png]]
+
+![](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/d65a0fca-d9c9-4774-9397-42ef64272226/cia-653439271.webp)

@@ -79,9 +79,5 @@ Bir Linux sisteminde güç düğmesine basıldığında sırasıyla şunlar olur
 1. **BIOS/UEFI:** Donanım testi (POST) yapar ve önyüklenebilir disk arar.
 2. **MBR/GPT:** Diskin ilk sektöründeki önyükleme kaydını okur.
 3. **Bootloader (GRUB):** İşletim sistemi seçme ekranını gösterir ve seçilen Linux çekirdeğini (Kernel) RAM'e yükler.
-4. **Kernel:** Donanımları tanır, sürücüleri yükler ve kök dosya sistemini (
-    
-    /
-    
-    ) bağlar.
+4. **Kernel:** Donanımları tanır, sürücüleri yükler ve kök dosya sistemini (/) bağlar.
 5. **Init System (Systemd/SysVinit):** İlk işlem olarak (PID 1) çalışır. Arka plan servislerini, ağı ve giriş ekranını başlatır.
