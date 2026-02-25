@@ -177,3 +177,66 @@ root@hackerbox:~$ wc /etc/passwd
 
 Yukarıdaki örnekte wc komutu, Linux işletim sistemlerindeki kayıtlı kullanıcıların listesini içeren /etc/passwd dosyasının sırasıyla satır, kelime ve toplam karakter sayısını getirmiştir.
 
+|Sütun değeri|Açıklama|
+|---|---|
+|46|Satır sayısı|
+|67|Kelime sayısı|
+|2544|Karakter sayısı|
+|/etc/passwd|Dosya yolu|
+**Cut**
+Satırları böler ve istediğiniz sütunu alır. /etc/passwd dosyası buna en iyi örnektir.
+
+```auto
+user@hackerbox:~$ cut -d ":" -f 1 /etc/passwd | head -n 3
+root
+daemon
+bin
+```
+(-d: Ayırıcı karakter [:], -f: Sütun numarası [1]).
+
+**Awk**
+awk komutu metin ve veri işleme görevleri için tasarlanmıştır ve özellikle sütun bazlı verilerle çalışırken oldukça etkilidir. Dosyaları satır satır okuyup, her satırı alanlara (sütunlara) ayırır ve belirtilen koşullara göre işlem yapar. awk, karmaşık metin işlemleri için çok sayıda fonksiyon ve kontrol yapıları sunar.
+
+```auto
+root@hackerbox:~$ cat names.txt
+John Doe
+Emily Clark
+Alex Turner
+
+root@hackerbox:~$ awk '{print $1}' names.txt
+John
+Emily
+Alex
+```
+Bu örnekte, names.txt adlı bir dosya içerisinde üç isim-soyisim çifti bulunmaktadır: John Doe, Emily Clark ve Alex Turner. awk '{print $1}' names.txt komutu, awk programını kullanarak bu dosyanın içeriğini işler. awk, metin dosyalarını satır satır okuyarak her satırı boşluk veya tab karakterlerine göre alanlara ayırır. Bu örnekte {print $1} ifadesi, her satırın ilk alanını (yani ismi) yazdırması talimatını verir.
+
+**Gelişmiş Örnek: Süreç Listesi**
+ps aux çıktısından sadece Kullanıcı Adı ($1) ve Komut ($11) sütunlarını alalım.
+
+```auto
+user@hackerbox:~$ ps aux | awk '{print $1, $11}' | head -n 3
+USER COMMAND
+root /sbin/init
+root [kthreadd]
+```
+
+**Sed**
+sed (stream editor) komutu metinleri işlemek, değiştirmek, eklemek, silmek veya dosyalar arasında yer değiştirmek gibi çeşitli metin düzenlemeleri yapabilen bir araçtır.
+
+sed komutu, genellikle metinleri filtrelemek ve dönüştürmek için kullanılır.
+
+```auto
+root@hackerbox:~$ cat names.txt
+Alice
+Charlie
+Bob
+
+root@hackerbox:~$ sed 's/Alice/George/' names.txt
+George
+Charlie
+Bob
+```
+Yukarıdaki örnekte, names.txt içerisinde bulunan Alice ismi, sed komutu yardımıyla George olarak değiştirilmiştir. Ancak, sed komutunun dosyada değişiklik yapmayıp, yalnızca ekrana yeni yapılan değişikliği yazdırmıştır. Dosyayı kalıcı değiştirmek için -i parametresi kullanılır.
+
+**Tee**
+Çıktıyı hem ekrana basar hem dosyaya yazar.
