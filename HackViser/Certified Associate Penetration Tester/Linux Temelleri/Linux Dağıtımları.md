@@ -10,3 +10,26 @@ Her dağıtım benzersiz özellikler ve yazılım sunsa da, hepsi birkaç temel 
 - **Paket Yöneticisi**: Yazılım uygulamalarını ve bileşenlerini yüklemek, güncellemek ve yönetmek için bir araç.
 - **Önyükleyici (Bootloader)**: Donanımın açılmasından sonra bilgisayarın önyükleme sürecini yöneten yazılım.
 - **Grafik Kullanıcı Arayüzü (GUI)**: İsteğe bağlı olsa da, çoğu distro kullanım kolaylığı için bir GUI sunar, örneğin GNOME, KDE veya XFCE.
+
+### Hangi Dağıtımı Seçmeliyim? (Karar Rehberi)
+
+İhtiyacınıza en uygun dağıtımı seçmek için aşağıdaki tabloyu kullanabilirsiniz:
+
+| İhtiyaç / Kullanıcı Tipi    | Önerilen Dağıtım                               | Neden?                                                           |
+| --------------------------- | ---------------------------------------------- | ---------------------------------------------------------------- |
+| **Yeni Başlayanlar**        | **Linux Mint** veya **Ubuntu**                 | Kurulumu çok kolaydır, Windows'a benzer, sürücü sorunu yaşatmaz. |
+| **Siber Güvenlik / Hacker** | **Kali Linux** veya **Parrot OS**              | İçinde yüzlerce saldırı ve analiz aracı yüklü gelir.             |
+| **Sunucu (Server)**         | **Ubuntu Server**, **Debian**, **Rocky Linux** | Grafik arayüzsüz gelir, çok kararlıdır, kaynak tüketimi azdır.   |
+| **Geliştirici / Programcı** | **Fedora** veya **Manjaro**                    | En güncel yazılım dillerini ve kütüphaneleri barındırır.         |
+| **Eski Bilgisayarlar**      | **Lubuntu** veya **Xubuntu**                   | Çok hafiftir, eski donanımlarda bile hızlı çalışır.              |
+| **Linux Uzmanları**         | **Arch Linux**                                 | Her şeyi sıfırdan elle kurarsınız, tam kontrol sağlar.           |
+
+### Paket Yönetim Sistemine Göre Ana Aileler
+
+Linux dünyası kullandıkları paket formatına (.deb,.rpm) göre büyük ailelere ayrılır. Bir ailedeki komutlar diğerinde çalışmaz.
+
+| Aile        | Paket Formatı | Paket Yöneticisi | Örnek Dağıtımlar            | Özellik                                           |
+| ----------- | ------------- | ---------------- | --------------------------- | ------------------------------------------------- |
+| **Debian**  | .deb          | apt, dpkg        | Ubuntu, Kali, Mint, Debian  | En yaygın ailedir. Geniş topluluk desteği vardır. |
+| **Red Hat** | .rpm          | dnf, yum, rpm    | Fedora, CentOS, RHEL, Rocky | Kurumsal dünyada standarttır.                     |
+| **Arch**    | .pkg.tar.zst  | pacman           | Arch, Manjaro               | Sürekli günceldir (Rolling Release).              |
