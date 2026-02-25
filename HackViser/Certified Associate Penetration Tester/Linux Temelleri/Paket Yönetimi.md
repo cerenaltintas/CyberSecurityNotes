@@ -37,11 +37,8 @@ Linux dünyasında farklı paket sistemleri vardır:
 
 APT (Advanced Package Tool), Debian ve türevleri gibi Linux dağıtımlarında yazılım paketlerini yönetmek için kullanılan güçlü bir araçtır. Bu araç, kullanıcıların yeni yazılımları kolayca kurmalarına, mevcut yazılımları güncellemelerine, gereksiz olanları kaldırmalarına ve tüm bu işlemleri yaparken yazılımlar arasındaki bağımlılıkları otomatik olarak çözümlemelerine olanak tanır. Basit komut satırı komutlarıyla, kullanıcılar sistemlerini güncel ve güvenli tutabilir, aynı zamanda ihtiyaç duydukları yazılımlara hızlıca erişebilirler. APT'nin sunduğu kolaylık ve verimlilik, onu Linux kullanıcıları arasında popüler bir seçenek haline getirmiştir.
 
-Ubuntu/Debian sistemlerde
+Ubuntu/Debian sistemlerde apt kullanılır. 
 
-apt
-
-kullanılır. 
 1\. Güncelleme
 
 Önce paket listesini internetten güncellemelisiniz.
@@ -57,10 +54,7 @@ All packages are up to date.
 
 Yüklemek istediğiniz paketin tam adını bilmiyorsanız arama yapabilirsiniz.
 
-names-only
-
-parametresi sadece paket isimlerinde arama yaparken, normal arama açıklamaları da arar.
-
+names-only parametresi sadece paket isimlerinde arama yaparken, normal arama açıklamaları da arar. 
 **Paket İsmi ve Açıklamalarında Arama:**
 
 ```auto
@@ -84,15 +78,7 @@ user@hackerbox:~$ sudo apt search ^htop
 htop - interactive processes viewer
 ```
 
-Daha detaylı bilgi (sürüm, boyut vb.) için
-
-apt-cache
-
-veya
-
-apt show
-
-kullanılır.
+Daha detaylı bilgi (sürüm, boyut vb.) için apt-cache veya apt show kullanılır.
 
 ```auto
 user@hackerbox:~$ apt show htop
