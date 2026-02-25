@@ -36,43 +36,36 @@ Linux dünyası kullandıkları paket formatına (.deb,.rpm) göre büyük ailel
 
 ### Popüler Linux Dağıtımları
 
-Ubuntu
-
-Debian tabanlıdır.
+**Ubuntu**
+ Debian tabanlıdır.
 
 - **Hedef Kitle**: Herkes (Masaüstü ve Sunucu).
 - **Özellikler**: En popüler dağıtımdır. Sorun yaşadığınızda internette çözümü en kolay bulunan sistemdir.
 - **Masaüstü**: Varsayılan olarak GNOME kullanır.
 
-Fedora
-
-Red Hat tabanlıdır.
+**Fedora**
+ Red Hat tabanlıdır.
 
 - **Hedef Kitle**: Geliştiriciler.
 - **Özellikler**: Yenilikçi teknolojileri ilk kullanan dağıtımdır. Linus Torvalds'ın da kullandığı dağıtımdır.
 
-CentOS / Rocky Linux
-
-Red Hat (RHEL) tabanlıdır.
+**CentOS / Rocky Linux**
+ Red Hat (RHEL) tabanlıdır.
 
 - **Hedef Kitle**: Sunucular.
 - **Özellikler**: Ücretli RHEL'in ücretsiz kopyasıdır. Çok kararlıdır, yıllarca kapatmadan çalışabilir.
 
-Debian
-
-- **Hedef Kitle**: Kararlılık isteyenler.
+**Debian**
+ - **Hedef Kitle**: Kararlılık isteyenler.
 - **Özellikler**: "Bozulması çok zor" bir sistemdir. Paketler çok test edildiği için biraz eski sürümler olabilir ama çok güvenilirdir.
 
-Kali Linux
-
-Debian tabanlıdır.
-
+**Kali Linux**
+ Debian tabanlıdır. 
 - **Hedef Kitle**: Sızma Testi Uzmanları (Pentester).
 - **Özellikler**: Günlük kullanım için uygun değildir. İçinde Wireshark, Metasploit, Nmap gibi araçlar hazır gelir. Root yetkisiyle çalışmaya meyillidir.
 
-Arch Linux
-
-- **Hedef Kitle**: İleri düzey kullanıcılar.
+**Arch Linux**
+ - **Hedef Kitle**: İleri düzey kullanıcılar.
 - **Özellikler**: Kurulum sihirbazı yoktur, komutlarla kurulur. "Rolling Release" modelini kullanır, yani versiyonu yoktur, hep en son sürümdür.
 
 ### Sürüm Modelleri: Fixed vs Rolling

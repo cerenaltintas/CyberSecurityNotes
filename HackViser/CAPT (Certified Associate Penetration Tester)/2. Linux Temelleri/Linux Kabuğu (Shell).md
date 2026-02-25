@@ -1,7 +1,7 @@
 ### Kabuk Nedir ve Neden İhtiyacımız Var?
 Bir bilgisayarın donanımı (işlemci, ram, disk) tek başına bir işe yaramaz. Onları yönetecek bir çekirdeğe (Kernel) ihtiyaç duyarız. Ancak çekirdek de sadece 0 ve 1'lerden anlayan karmaşık bir yapıdır. İşte burada **Kabuk (Shell)** devreye girer.
 
-**Kabuğun Görevi:** Sizin yazdığınız "insan diline yakın" komutları (örn:ls-listele), çekirdeğin anlayacağı "makine diline" çevirir. Çekirdek işlemi yaptıktan sonra sonucu alır ve tekrar sizin anlayacağınız şekilde ekrana basar. Yani bir nevi **tercümanlık** yapar.
+**Kabuğun Görevi:** Sizin yazdığınız "insan diline yakın" komutları (örn: ls-listele), çekirdeğin anlayacağı "makine diline" çevirir. Çekirdek işlemi yaptıktan sonra sonucu alır ve tekrar sizin anlayacağınız şekilde ekrana basar. Yani bir nevi **tercümanlık** yapar.
 
 Linux'ta iki ana tip kabuk vardır: **Komut Satırı (CLI)** ve **Grafik Arayüzü (GUI)**.
 
@@ -11,8 +11,7 @@ Komut satırı, metin tabanlı bir iletişim yöntemidir. Terminal adı verilen 
 ![](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/68a4d2f6-4913-4850-b2cd-ec08a7918b4c/terminal-example-2fe48b7c6.webp)
 
 **Neden Komut Satırı Kullanmalıyım?**
-
-- **Hız:** Dosya kopyalamak, program kurmak klavyeyle çok daha hızlıdır.
+ - **Hız:** Dosya kopyalamak, program kurmak klavyeyle çok daha hızlıdır.
 - **Otomasyon:** Yüzlerce işlemi tek bir komut dosyası (script) ile yapabilirsiniz.
 - **Uzaktan Erişim:** Sunuculara SSH ile bağlandığınızda grafik arayüz yoktur, sadece komut satırı vardır.
 
@@ -28,8 +27,7 @@ Linux'ta tek bir kabuk yoktur. İhtiyacınıza göre değiştirebilirsiniz.
 2. **Zsh (Z Shell):** Bash ile uyumludur ancak daha gelişmiş otomatik tamamlama ve tema desteği sunar (macOS varsayılanı).
 3. **Fish:** Kullanıcı dostudur, komutları yazarken renklendirir ve önerilerde bulunur.
 
-**Hangi kabuğu kullandığınızı öğrenmek için:**
-
+**Hangi kabuğu kullandığınızı öğrenmek için:** 
 ```auto
 user@hackerbox:~$ echo $SHELL
 /bin/bash
@@ -45,15 +43,13 @@ Terminal uygulaması, kullanıcıların kabukla etkileşim kurmasına olanak tan
 **Faydalı Terminal Komutları:**
 
 1. **clear(Ekranı Temizle):** Terminal ekranı komutlarla dolduğunda temizlemek için kullanılır.
-    
     ```auto
     user@hackerbox:~$ clear
     ```
     
-    _Bu komutu çalıştırdığınızda, önceki tüm çıktılar silinir ve imleç en üst satıra taşınır. Temiz bir sayfa açmış gibi olursunuz._
+	_Bu komutu çalıştırdığınızda, önceki tüm çıktılar silinir ve imleç en üst satıra taşınır. Temiz bir sayfa açmış gibi olursunuz._
     
-1. **history(Geçmiş Komutlar):** Daha önce çalıştırdığınız komutların listesini verir. Unuttuğunuz bir komutu bulmak için harikadır.
-    
+2. **history(Geçmiş Komutlar):** Daha önce çalıştırdığınız komutların listesini verir. Unuttuğunuz bir komutu bulmak için harikadır.
     ```auto
     user@hackerbox:~$ history
       1  ls
@@ -67,11 +63,9 @@ Terminal uygulaması, kullanıcıların kabukla etkileşim kurmasına olanak tan
       9  exit
      10  history
     ```
-    
     _Çıktıda sol taraftaki numaralar komutun sıra numarasını gösterir. Örneğin !4 yazıp enter'a basarsanız 4. sıradaki ping google.com komutunu tekrar çalıştırır._
     
-1. **type(Komut Türü):** Bir komutun gerçekte ne olduğunu (alias, builtin, dosya) gösterir.
-    
+3. **type(Komut Türü):** Bir komutun gerçekte ne olduğunu (alias, builtin, dosya) gösterir.
     ```auto
     user@hackerbox:~$ type ls
     ls is aliased to `ls --color=auto'
@@ -80,18 +74,13 @@ Terminal uygulaması, kullanıcıların kabukla etkileşim kurmasına olanak tan
     user@hackerbox:~$ type grep
     grep is /usr/bin/grep
     ```
-    
 	Burada ls komutunun aslında renkli çıktı vermesi için bir takma ad (alias) olduğunu, cd komutunun kabuğun içine gömülü (builtin) olduğunu ve grep komutunun diskte duran gerçek bir program olduğunu anlıyoruz.
     
-
 ### Kabuk Konfigürasyon Dosyaları (.bashrc, .zshrc)
-
 Terminal her açıldığında kabuk, ev dizininizdeki (/home/kullanici) bazı gizli ayar dosyalarını okur. Bu dosyalara kendi kısayollarınızı ekleyebilirsiniz.
 
 - **Bash kullanıyorsanız:** .bashrc
-    
 - **Zsh kullanıyorsanız:** .zshrc
-    
 
 **Örnek Senaryo:** Her seferinde clear yazmak yerine sadece c
 yazarak ekranı temizlemek istiyoruz.
