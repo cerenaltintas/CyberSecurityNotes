@@ -4,27 +4,11 @@ Her Linux dağıtımı, belirli paket yönetim sistemlerini ve paket formatları
 
 ### Paket (Package) ve Depo (Repository) Nedir?
 
-Windows'ta bir program kurmak için internetten
+Windows'ta bir program kurmak için internetten .exe dosyası indirip "İleri > İleri" dersiniz. Linux'ta ise işler daha güvenli ve düzenlidir.
 
-.exe
-
-dosyası indirip "İleri > İleri" dersiniz. Linux'ta ise işler daha güvenli ve düzenlidir.
-
--   **Paket (Package):** Bir programın çalışması için gereken tüm dosyaların (kodlar, kütüphaneler, resimler) sıkıştırılmış tek bir dosya halidir (Örn:
-    
-    .deb
-    
-    veya
-    
-    .rpm
-    
-    ).
+-   **Paket (Package):** Bir programın çalışması için gereken tüm dosyaların (kodlar, kütüphaneler, resimler) sıkıştırılmış tek bir dosya halidir (Örn: .deb veya .rpm ).
 -   **Depo (Repository):** Binlerce paketin saklandığı, güvenli ve resmi internet sunucularıdır. App Store veya Google Play Store gibi düşünebilirsiniz.
--   **Paket Yöneticisi (Package Manager):** Sizin yerinize depoya bağlanan, paketi indiren, kuran ve güncelleyen araçtır (Örn:
-    
-    apt
-    
-    ).
+-   **Paket Yöneticisi (Package Manager):** Sizin yerinize depoya bağlanan, paketi indiren, kuran ve güncelleyen araçtır (Örn: apt ).
 
 Bu sistem sayesinde virüs bulaşma riski çok düşüktür çünkü yazılımlar resmi kaynaklardan indirilir.
 
@@ -57,8 +41,7 @@ Ubuntu/Debian sistemlerde
 
 apt
 
-kullanılır.
-
+kullanılır. 
 1\. Güncelleme
 
 Önce paket listesini internetten güncellemelisiniz.
