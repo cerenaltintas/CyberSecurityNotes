@@ -126,14 +126,13 @@ user@hackerbox:~$ printenv PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-_echo_ komutu değişkenin değerini ekrana basar. $PATH çıktısında, aralarında iki nokta (:) olan dizin yolları görürsünüz. Siz bir komut yazdığınızda Linux bu dizinlere sırasıyla bakar.
+_echo_ komutu değişkenin değerini ekrana basar. 
+$PATH çıktısında, aralarında iki nokta (:) olan dizin yolları görürsünüz. Siz bir komut yazdığınızda Linux bu dizinlere sırasıyla bakar.
 
 ### Komut Zincirleme Operatörleri
-
 Birden fazla komutu tek satırda yazmak için özel karakterler kullanılır.
 
-1. Sıralı Çalıştırma (;)
-
+**1. Sıralı Çalıştırma (;)**
 Birinci komut bitince, hata verse bile ikinciyi çalıştırır.
 
 ```auto
@@ -141,11 +140,9 @@ user@hackerbox:~$ echo "Birinci Komut" ; date
 Birinci Komut
 Fri Oct 20 14:30:00 UTC 2023
 ```
-
 _İlk komut metni yazdırdı, hemen ardından__date__komutu çalıştı ve tarihi gösterdi._
 
-2. Başarılıysa Devam Et (&&)
-
+**2. Başarılıysa Devam Et (&&)**
 Birinci komut **başarılı** olursa (hata vermezse) ikinciyi çalıştırır.
 
 ```auto
@@ -153,11 +150,9 @@ user@hackerbox:~$ mkdir test_dizinu && cd test_dizinu
 user@hackerbox:~/test_dizinu$ pwd
 /home/user/test_dizinu
 ```
-
 _Burada__mkdir_başarılı olduğu için cd komutu çalıştı ve yeni dizinin içine girdik._
 
-3. Hata Varsa Çalıştır (||)
-
+**3. Hata Varsa Çalıştır (||)**
 Birinci komut **hata verirse** ikinciyi çalıştırır. Genellikle hata mesajı göstermek için kullanılır.
 
 ```auto
@@ -165,16 +160,13 @@ user@hackerbox:~$ cd olmayan_dizin || echo "Böyle bir dizin yok!"
 -bash: cd: olmayan_dizin: No such file or directory
 Böyle bir dizin yok!
 ```
-
 _cd__komutu dizini bulamadığı için hata verdi, bunun üzerine || operatörü devreye girdi ve echo komutunu çalıştırdı._
 
 ### Betiklerin Başlangıcı (Shebang #!)
-
 Bir metin dosyasının kabuk betiği (script) olduğunu belirtmek için ilk satırına **Shebang** (#!) eklenir.
 
 ```auto
 #!/bin/bash
 echo "Merhaba Dünya"
 ```
-
 Bu satır sisteme "Bu dosyayı /bin/bash programını kullanarak çalıştır" der.

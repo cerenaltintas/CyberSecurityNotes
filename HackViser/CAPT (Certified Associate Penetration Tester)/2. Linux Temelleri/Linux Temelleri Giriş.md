@@ -1,4 +1,3 @@
-LIST FROM "Linux Temelleri"
 
 **Linux ve Windows Karşılaştırması**
 
