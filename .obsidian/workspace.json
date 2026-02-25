@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Metin Düzenleme.md",
+                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Filtreler.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metin Düzenleme"
+              "title": "Filtreler"
             }
           }
         ],
@@ -242,13 +242,14 @@
       "breadcrumbs:Breadcrumbs Visualisation": false
     }
   },
-  "active": "cc6687629a7781db",
+  "active": "6825c83a00f7a391",
   "lastOpenFiles": [
-    "Clippings/Linux Temelleri  Hackviser.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Filtreler.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Metin Düzenleme.md",
+    "Clippings/Linux Temelleri  Hackviser.md",
     "Clippings",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux'ta Dosya ve Dizinleri Bulma Yöntemleri.md",
-    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Dosya ve Dizin İşlemleri.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Dizinlerde Gezinti.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri Giriş.md",
