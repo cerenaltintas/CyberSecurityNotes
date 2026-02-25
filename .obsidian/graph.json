@@ -8,24 +8,38 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:Linux Temelleri",
+      "query": "path:\"HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri\"  ",
       "color": {
         "a": 1,
         "rgb": 14048348
       }
     },
     {
-      "query": "",
+      "query": "path:\"HackViser/CAPT (Certified Associate Penetration Tester)/1. Siber Güvenliğe Giriş\"  ",
       "color": {
         "a": 1,
-        "rgb": 14069084
+        "rgb": 8797124
       }
     },
     {
-      "query": "",
+      "query": "path:\"HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri\"  ",
       "color": {
         "a": 1,
         "rgb": 11392604
+      }
+    },
+    {
+      "query": "path:\"HackViser/CAPT (Certified Associate Penetration Tester)/4. Windows Komut Satırı Kullanımı\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 2719529
+      }
+    },
+    {
+      "query": "path:\"HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084269
       }
     }
   ],
@@ -39,6 +53,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7132754626224403,
+  "scale": 0.5087618855792574,
   "close": true
 }
