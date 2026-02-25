@@ -1,0 +1,7 @@
+CMD ve PowerShell, Windows için komut satırı arayüzleri (CLI) olarak karşımıza çıkan iki farklı araçtır. Her ikisi de çeşitli görevler için kullanılsa da, PowerShell birçok açıdan daha avantajlıdır.
+
+CMD, MS-DOS temelli basit bir komut sözdizimi kullanır. Sınırlı İşlevselliği vardır ve temel komutları ve toplu iş dosyalarını (batch) çalıştırmak için idealdir. Buna karşın scripting (betik) yetenekleri sınırlıdır, bu da güvenli ve sağlam betikler yazmayı zorlaştırır.
+
+PowerShell ise eylemleri ve nesneleri temsil eden "cmdlet" adı verilen komutlar kullanarak daha fazla işlevsellik ve kontrol sunar. Nesneye dayalı olmasıyla verileri nesneler olarak ele alır, bu da daha verimli veri işleme ve otomasyona imkan tanır. Güçlü bir dildir ve karmaşık görevleri otomatikleştirmek için betikler yazmaya olanak tanır. Kod imzalama ve kısıtlı yürütme politikaları gibi gelişmiş güvenlik özellikleri sunar. Microsoft PowerShell'i aktif olarak geliştirirken, CMD eski betiklerle uyumluluğa odaklanmaktadır.
+
+CMD, eski betiklerle uyumluluk için hala kullanılsa da, çoğu kullanıcı için PowerShell daha çok yönlü ve güçlü bir seçenektir. Windows yönetimi veya otomasyon konusunda daha derin bilgi edinmek istiyorsanız, PowerShell öğrenmeye değer bir araçtır.
