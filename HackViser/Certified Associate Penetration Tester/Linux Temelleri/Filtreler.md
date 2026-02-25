@@ -11,3 +11,31 @@ Bir fabrikadaki üretim bandı gibi düşünün.
 3. **Bant (Pipe |): İşlenmiş veriyi bir sonraki makineye taşır.
 4. Makine 2 (Komut 2): Gelen veriyi süzer (Örn: grep).
 5. **Ürün:** Ekrana gelen filtrelenmiş sonuç.
+
+Bu sayede, tek başına basit olan komutlar birleşerek çok karmaşık işleri yapabilir hale gelir.
+
+### 1. Yönlendirme (Redirection)
+
+Linux'ta her programın 3 kapısı vardır:
+
+1. **Giriş (STDIN - 0):** Klavye.
+2. **Çıkış (STDOUT - 1):** Ekran.
+3. **Hata (STDERR - 2):** Hata mesajları (Ekran).
+
+Bu kapıları dosyalara yönlendirebiliriz.
+
+| Operatör | Açıklama                                            | Örnek Komut ve Çıktısı                                   |
+| -------- | --------------------------------------------------- | -------------------------------------------------------- |
+| >        | Çıktıyı dosyaya yaz (Eskisini siler).               | ls > liste.txt<br>(Ekrana bir şey basmaz, dosyaya yazar) |
+| >>       | Çıktıyı dosyanın **sonuna ekler**.                  | echo "Son satır" >> not.txt                              |
+| 2>       | Sadece hataları dosyaya kaydeder.                   | ls /olmayan_dizin 2> hata.txt                            |
+| <        | Dosyayı komuta girdi olarak verir.                  | wc -l < liste.txt                                        |
+| \|       | Birinci komutun çıktısını ikinciye gönderir (Pipe). | cat dosya \| grep "aranan"                               |
+
+**Örnek Senaryo: Hataları Gizleyerek Arama Yapmak**
+find komutu erişemediği dizinler için "Permission denied" hatası basar. Bunları /dev/null (kara delik) dosyasına atarak temiz bir çıktı alalım.
+
+```auto
+user@hackerbox:~$ find / -name "gizli_dosya" 2> /dev/null
+/home/admin/gizli_dosya
+```
