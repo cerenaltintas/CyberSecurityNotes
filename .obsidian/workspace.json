@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/5.Dosya ve Dizin İşlemleri.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#yıldız",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -228,7 +228,7 @@
       "breadcrumbs:Breadcrumbs Visualisation": false
     }
   },
-  "active": "7401a109f55891b2",
+  "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/4.Dizinlerde Gezinti.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/3.Linux Kabuğu (Shell).md",
