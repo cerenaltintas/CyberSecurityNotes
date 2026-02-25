@@ -240,3 +240,25 @@ Yukarıdaki örnekte, names.txt içerisinde bulunan Alice ismi, sed komutu yard�
 
 **Tee**
 Çıktıyı hem ekrana basar hem dosyaya yazar.
+
+```auto
+user@hackerbox:~$ echo "Log Kaydı" | tee log.txt
+Log Kaydı
+```
+
+**Diff**
+İki dosya arasındaki farkları gösterir.
+```auto
+user@hackerbox:~$ diff dosya1.txt dosya2.txt
+< Eski satır
+> Yeni satır
+```
+
+**Tr**
+Karakter değişimi yapar.
+**Örnek: Küçük harfleri büyük yapalım**
+
+```auto
+user@hackerbox:~$ echo "merhaba" | tr "a-z" "A-Z"
+MERHABA
+```
