@@ -33,3 +33,51 @@ Linux dünyası kullandıkları paket formatına (.deb,.rpm) göre büyük ailel
 | **Debian**  | .deb          | apt, dpkg        | Ubuntu, Kali, Mint, Debian  | En yaygın ailedir. Geniş topluluk desteği vardır. |
 | **Red Hat** | .rpm          | dnf, yum, rpm    | Fedora, CentOS, RHEL, Rocky | Kurumsal dünyada standarttır.                     |
 | **Arch**    | .pkg.tar.zst  | pacman           | Arch, Manjaro               | Sürekli günceldir (Rolling Release).              |
+
+### Popüler Linux Dağıtımları
+
+Ubuntu
+
+Debian tabanlıdır.
+
+- **Hedef Kitle**: Herkes (Masaüstü ve Sunucu).
+- **Özellikler**: En popüler dağıtımdır. Sorun yaşadığınızda internette çözümü en kolay bulunan sistemdir.
+- **Masaüstü**: Varsayılan olarak GNOME kullanır.
+
+Fedora
+
+Red Hat tabanlıdır.
+
+- **Hedef Kitle**: Geliştiriciler.
+- **Özellikler**: Yenilikçi teknolojileri ilk kullanan dağıtımdır. Linus Torvalds'ın da kullandığı dağıtımdır.
+
+CentOS / Rocky Linux
+
+Red Hat (RHEL) tabanlıdır.
+
+- **Hedef Kitle**: Sunucular.
+- **Özellikler**: Ücretli RHEL'in ücretsiz kopyasıdır. Çok kararlıdır, yıllarca kapatmadan çalışabilir.
+
+Debian
+
+- **Hedef Kitle**: Kararlılık isteyenler.
+- **Özellikler**: "Bozulması çok zor" bir sistemdir. Paketler çok test edildiği için biraz eski sürümler olabilir ama çok güvenilirdir.
+
+Kali Linux
+
+Debian tabanlıdır.
+
+- **Hedef Kitle**: Sızma Testi Uzmanları (Pentester).
+- **Özellikler**: Günlük kullanım için uygun değildir. İçinde Wireshark, Metasploit, Nmap gibi araçlar hazır gelir. Root yetkisiyle çalışmaya meyillidir.
+
+Arch Linux
+
+- **Hedef Kitle**: İleri düzey kullanıcılar.
+- **Özellikler**: Kurulum sihirbazı yoktur, komutlarla kurulur. "Rolling Release" modelini kullanır, yani versiyonu yoktur, hep en son sürümdür.
+
+### Sürüm Modelleri: Fixed vs Rolling
+
+Linux dağıtımları güncellenme mantığına göre ikiye ayrılır:
+
+1. **Sabit Sürüm (Fixed Release):** Windows gibidir. Yılda bir veya iki kez büyük sürüm çıkar (Ubuntu 22.04 -> 24.04). Kararlıdır.
+2. **Yuvarlanan Sürüm (Rolling Release):** Sürüm numarası yoktur. Uygulamalar ve çekirdek sürekli güncellenir. Her zaman en son teknolojiyi kullanırsınız ama güncelleme sonrası hata çıkma riski daha yüksektir (Arch Linux).
