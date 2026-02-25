@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Siber Güvenliğe Giriş.md",
+                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri Giriş/Linux Temelleri Giriş.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Siber Güvenliğe Giriş"
+              "title": "Linux Temelleri Giriş"
             }
           },
           {
@@ -31,8 +31,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -218,17 +217,18 @@
       "breadcrumbs:Breadcrumbs Visualisation": false
     }
   },
-  "active": "6825c83a00f7a391",
+  "active": "5555d01dade15f15",
   "lastOpenFiles": [
-    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri Giriş.md",
-    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Kabuğu (Shell).md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri Giriş/Linux Dağıtımları.md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Siber Güvenliğe Giriş.md",
-    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Dağıtımları.md",
+    "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Untitled.md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Hacker.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri Giriş/Linux Temelleri Giriş.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri Giriş/Linux Kabuğu (Shell).md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Siber Güvenliğin Alt Alanları.md",
     "Pasted image 20260225191645.png",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Temel Bilgiler.md",
-    "HackViser/Certified Associate Penetration Tester/Linux Temelleri",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri Giriş",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Sızma Testi (Pentest).md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Kariyer.md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Untitled 4.md",
