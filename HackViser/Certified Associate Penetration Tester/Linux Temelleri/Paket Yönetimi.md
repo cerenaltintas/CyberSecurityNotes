@@ -35,9 +35,7 @@ Linux dünyasında farklı paket sistemleri vardır:
 
 ### APT (Advanced Package Tool) Kullanımı
 
-APT (Advanced Package Tool), Debian ve türevleri gibi Linux dağıtımlarında yazılım paketlerini yönetmek için kullanılan güçlü bir araçtır. Bu araç, kullanıcıların yeni yazılımları kolayca kurmalarına, mevcut yazılımları güncellemelerine, gereksiz olanları kaldırmalarına ve tüm bu işlemleri yaparken yazılımlar arasındaki bağımlılıkları otomatik olarak çözümlemelerine olanak tanır. Basit komut satırı komutlarıyla, kullanıcılar sistemlerini güncel ve güvenli tutabilir, aynı zamanda ihtiyaç duydukları yazılımlara hızlıca erişebilirler. APT'nin sunduğu kolaylık ve verimlilik, onu Linux kullanıcıları arasında popüler bir seçenek haline getirmiştir.
-
-Ubuntu/Debian sistemlerde apt kullanılır. 
+APT (Advanced Package Tool), Debian ve türevleri gibi Linux dağıtımlarında yazılım paketlerini yönetmek için kullanılan güçlü bir araçtır. Bu araç, kullanıcıların yeni yazılımları kolayca kurmalarına, mevcut yazılımları güncellemelerine, gereksiz olanları kaldırmalarına ve tüm bu işlemleri yaparken yazılımlar arasındaki bağımlılıkları otomatik olarak çözümlemelerine olanak tanır. Basit komut satırı komutlarıyla, kullanıcılar sistemlerini güncel ve güvenli tutabilir, aynı zamanda ihtiyaç duydukları yazılımlara hızlıca erişebilirler. APT'nin sunduğu kolaylık ve verimlilik, onu Linux kullanıcıları arasında popüler bir seçenek haline getirmiştir. Ubuntu/Debian sistemlerde apt kullanılır. 
 
 1\. Güncelleme
 
