@@ -93,3 +93,87 @@ Mar 15 12:01:00 servername sshd[23457]: Accepted password for user1 from 192.168
 Mar 15 12:02:00 servername sshd[23458]: Failed password for user2 from 192.168.1.3 port 76543 ssh2
 ```
 Yukarıdaki örnekte,  auth.log dosyasının son üç satırı ekrana yazdırılmıştır. auth.log dosyası, Linux sisteminde kullanıcı kimlik doğrulama işlemleri ile ilgili olayların kaydedildiği bir log dosyasıdır.
+
+**Canlı Log Takibi (tail -f):**
+Bir log dosyasını sürekli izlemek (örneğin bir sunucuya gelen istekleri anlık görmek) için -f (follow) parametresi kullanılır.
+
+```auto
+user@hackerbox:~$ tail -f /var/log/syslog
+Aug 1 10:00:01 server CRON[123]: (root) CMD (command)
+Aug 1 10:05:01 server sshd[456]: Accepted password for user...
+```
+
+(Yeni log düştükçe ekran akar. Çıkmak için CTRL+C).
+
+**Sort**
+sort komutu, verilen dosyanın içeriğini alfabetik sıralar.
+
+```auto
+root@hackerbox:~$ cat names.txt
+Bob
+Charlie
+Alice
+
+root@hackerbox:~$ sort names.txt
+Alice
+Bob
+Charlie
+```
+Yukarıdaki örnekte, "names.txt" içerisinde yer alan isimleri "alfabetik" olarak ekrana yazdırdık.
+
+**Uniq**
+uniq komutu, ardışık olarak tekrar eden satırları filtreleyerek dosya içerisindeki benzersiz satırları gösterir.
+
+Genellikle sort komutu ile birlikte kullanılır çünkü tek başına kullanıldığında sadece ardışık olarak tekrar eden satırları tespit eder.
+
+```auto
+root@hackerbox:~$ cat names.txt
+Alice
+Charlie
+Alice
+Bob
+
+root@hackerbox:~$ sort names.txt | uniq
+Alice
+Bob
+Charlie
+```
+-c: Tekrar sayısını gösterir (Count).
+
+**Örnek: Kimden kaç tane var sayalım**
+```auto
+user@hackerbox:~$ sort isimler.txt | uniq -c
+      2 Ali Veli
+      1 Ayşe Yılmaz
+      1 Mehmet Öz
+```
+
+**Grep**
+grep komutu, dosyalar içindeki belirli metin dizelerini aramak, satırları filtrelemek ve eşleşen sonuçları göstermek için kullanılır.
+
+grep çok güçlü bir araçtır ve log dosyaları, konfigürasyon dosyaları veya herhangi bir metin dosyası üzerinde aramalar yapmak için sıkça kullanılır.
+
+```auto
+root@hackerbox:~$ grep '192.168.1.1' /var/log/apache2/access.log
+192.168.1.1 - - [15/Mar/2024:10:00:00 +0000] "GET /index.html HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+192.168.1.1 - - [15/Mar/2024:10:00:02 +0000] "POST /login.php HTTP/1.1" 200 452 "http://example.com/login" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N)"
+192.168.1.1 - - [15/Mar/2024:10:00:03 +0000] "GET /wp-admin HTTP/1.1" 403 497 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6)"
+```
+
+Bu komut, Apache 2 web sunucusuna ait erişim loglarının içerisinde yalnızca IP adresi 192.168.1.1 olan kayıtları ekrana yazdıracaktır.
+
+**İleri Düzey grep Parametreleri:**
+
+- -i: Büyük/küçük harf duyarsız.
+- -v: Eşleşmeyenleri göster (hariç tut).
+- -r: Dizin içinde özyineli (recursive) arama.
+
+**Wc**
+wc (word count) komutu, dosyaların ne kadar büyük olduğunu veya ne kadar veri içerdiğini hızlıca anlamanızı sağlar.
+```auto
+root@hackerbox:~$ wc /etc/passwd
+46   67 2544 /etc/passwd
+```
+
+Yukarıdaki örnekte wc komutu, Linux işletim sistemlerindeki kayıtlı kullanıcıların listesini içeren /etc/passwd dosyasının sırasıyla satır, kelime ve toplam karakter sayısını getirmiştir.
+
