@@ -1,0 +1,216 @@
+### Dosya ve Inode Nedir?
+
+Linux'ta "Her şey bir dosyadır" felsefesi vardır. Resimleriniz, metinleriniz, hatta donanımlarınız (klavye, disk) bile bir dosya olarak temsil edilir.
+
+**Inode (Index Node):** Dosyanın kimlik kartıdır. Bir dosya oluşturduğunuzda, diskte iki şey oluşur:
+
+1. **Veri:** Dosyanın içindeki gerçek bilgi.
+2. **Inode:** Dosyanın sahibi kim, boyutu ne, izinleri ne, diskte hangi adreste duruyor gibi "üst bilgileri" tutan kayıt. Dosya ismi ise sadece bu Inode'a işaret eden bir etikettir.
+
+### 1. Dosya Oluşturma (touch)
+
+touch komutu dosya varsa tarihini günceller, yoksa boş bir dosya oluşturur.
+
+```auto
+user@hackerbox:~$ touch notlar.txt
+user@hackerbox:~$ ls -l notlar.txt
+-rw-r--r-- 1 user user 0 Aug 01 12:00 notlar.txt
+```
+
+_ls -l_ çıktısında görüldüğü gibi boyutu 0 olan bir dosya oluşturuldu.
+
+**Toplu Oluşturma:**
+
+```auto
+user@hackerbox:~$ touch dosya{1..3}.txt
+user@hackerbox:~$ ls
+dosya1.txt  dosya2.txt  dosya3.txt
+```
+
+_Süslü parantez {}_ kullanarak tek seferde 3 dosya oluşturduk._
+
+### 2. Dizin Oluşturma (mkdir)
+
+```auto
+user@hackerbox:~$ mkdir projeler
+```
+
+**İç İçe Dizin Oluşturma (-p):** 
+
+Normalde mkdir a/b/c hata verir çünkü a dizini yoktur. -p (parents) parametresi tüm yolu oluşturur.
+
+```auto
+user@hackerbox:~$ mkdir -p projeler/python/uygulama
+user@hackerbox:~$ tree projeler
+projeler
+└── python
+    └── uygulama
+```
+
+_Görüldüğü gibi python_ dizini yokken bile hata vermedi, hepsini sırayla oluşturdu.
+
+### 3. Kopyalama (cp)
+
+Dosya veya dizinlerin kopyasını oluşturur.
+
+| Komut                        | Açıklama                                                                           |
+| ---------------------------- | ---------------------------------------------------------------------------------- |
+| cp dosya.txt yedek.txt       | Dosyayı kopyalar.                                                                  |
+| cp -r dizin/ yedek_dizin/    | Dizini ve **içindekileri** kopyalar (Recursive).                                   |
+| cp -i dosya.txt hedef/       | Hedefte aynı dosya varsa üzerine yazmadan önce sorar (Interactive).                |
+| cp --backup dosya.txt hedef/ | Hedefte aynı dosya varsa, eskisinin adını değiştirerek yedekler (örn: dosya.txt~). |
+
+**Etkileşimli Kopyalama (-i):**
+
+```auto
+user@hackerbox:~$ cp -i notlar.txt /tmp/
+cp: overwrite '/tmp/notlar.txt'? y
+```
+
+_Aynı isimde dosya olduğu için bize sordu, y_(yes) diyerek onayladık.
+
+**Yedekleyerek Kopyalama (--backup):**
+
+```auto
+user@hackerbox:~$ cp --backup notlar.txt /tmp/
+user@hackerbox:~$ ls /tmp/notlar*
+/tmp/notlar.txt  /tmp/notlar.txt~
+```
+
+_Eski dosyanın sonuna ~ işareti ekleyerek yedeğini aldı, yenisini normal isimle kaydetti._
+
+### 4. Taşıma ve Yeniden Adlandırma (mv)
+
+Linux'ta "Yeniden Adlandırma" komutu yoktur, bu işi mv (Move) yapar.
+
+- **İsim Değiştirme:** mv eski.txt yeni.txt
+    
+- **Taşıma:** mv dosya.txt /tmp/
+    
+
+**Örnek Senaryo: Dosya Taşıma**
+
+```auto
+user@hackerbox:~$ mv notlar.txt Belgeler/
+user@hackerbox:~$ ls Belgeler/
+notlar.txt
+```
+
+_Dosya artık bulunduğu yerden silindi ve Belgeler dizinine taşındı._
+
+### 5. Silme (rm)
+
+**DİKKAT:** Linux terminalinde "Geri Dönüşüm Kutusu" yoktur. Silinen dosya gider.
+
+|Komut|Açıklama|
+|---|---|
+|rm dosya.txt|Dosyayı siler.|
+|rm -i dosya.txt|Silerken "Emin misiniz?" diye sorar (Güvenli mod).|
+|rm -r dizin/|Dizini ve içindekileri siler.|
+|rm -rf dizin/|Dizini **zorla** ve sormadan siler (Çok tehlikelidir!).|
+|rmdir dizin/|Sadece **içi boş** dizini siler (En güvenli yöntem).|
+
+**Güvenli Silme (-i):**
+
+```auto
+user@hackerbox:~$ rm -i önemli_belge.txt
+rm: remove regular file 'önemli_belge.txt'? n
+```
+
+_Yanlışlıkla silmeyi önlemek için-i parametresini alışkanlık haline getirin._
+
+**Dizin Silme (-r):**
+
+```auto
+user@hackerbox:~$ rm -r projeler/
+```
+
+_İçi dolu dizinleri silmek için-r şarttır._
+
+### 6. Dosya Bilgisi ve Inode
+
+- **file**: Dosyanın türünü (resim, metin, binary) belirler.
+    
+    ```auto
+    user@hackerbox:~$ file /bin/bash
+    /bin/bash: ELF 64-bit LSB shared object, x86-64
+    user@hackerbox:~$ file notlar.txt
+    notlar.txt: ASCII text
+    ```
+    
+    _Uzantısı ne olursa olsun, dosyanın gerçek içeriğini söyler._
+    
+- **stat**: Dosya hakkında çok detaylı bilgi verir (Inode, zaman damgaları).
+    
+    ```auto
+    user@hackerbox:~$ stat notlar.txt
+      File: notlar.txt
+      Size: 0           Blocks: 0          IO Block: 4096   regular empty file
+    Inode: 123456      Links: 1
+    Access: 2023-10-20 12:00:00.000000000 +0300
+    Modify: 2023-10-20 12:00:00.000000000 +0300
+    Change: 2023-10-20 12:00:00.000000000 +0300
+    ```
+    
+
+### 7. Dosya Bağlantıları (Links)
+
+Inodeları görmek için ls -i kullanılır:
+
+```auto
+user@hackerbox:~$ ls -i notlar.txt
+123456 notlar.txt
+```
+
+Hard Link (Sert Bağlantı)
+
+Dosyanın fiziksel verisine (Inode) ikinci bir isim verir.
+
+- Orijinal dosya silinse bile veri silinmez, çünkü Hard Link üzerinden erişilebilir.
+- Sadece aynı disk bölümünde çalışır.
+
+**Örnek Senaryo:**
+
+```auto
+user@hackerbox:~$ ln notlar.txt sert_link.txt
+user@hackerbox:~$ ls -li
+123456 -rw-r--r-- 2 user user 0 Aug 01 12:00 notlar.txt
+123456 -rw-r--r-- 2 user user 0 Aug 01 12:00 sert_link.txt
+```
+
+_Dikkat edin, her iki dosyanın da Inode numarası (en baştaki sayı) aynı. Bu, aslında diskte aynı veriyi işaret ettikleri anlamına gelir._
+
+Soft Link (Sembolik Link)
+
+Windows'taki "Kısayol" gibidir. Sadece orijinal dosyanın yolunu gösterir.
+
+- Orijinal dosya silinirse link bozulur (kırık link).
+- Farklı diskler arasında çalışabilir.
+
+**Örnek Senaryo:**
+
+```auto
+user@hackerbox:~$ ln -s /var/www/html site_kisayolu
+user@hackerbox:~$ ls -li site_kisayolu /var/www/html
+654321 drwxr-xr-x 2 root root 4096 Aug 01 10:00 /var/www/html
+789012 lrwxrwxrwx 1 user user   13 Aug 01 12:05 site_kisayolu -> /var/www/html
+```
+
+_Burada Inode numaraları farklıdır._
+
+_site_kisayolu sadece/var/www/html adresini gösteren küçük bir dosyadır._
+
+### 8. İleri Düzey Kopyalama (dd)
+
+dd komutu düşük seviyeli kopyalama yapar. Disk imajı almak veya yazdırmak için kullanılır.
+
+**Örnek: ISO Dosyasını USB'ye Yazdırmak**
+
+```auto
+sudo dd if=linux.iso of=/dev/sdb bs=4M status=progress
+```
+
+- if: Kaynak (Input File - ISO dosyası)
+- of: Hedef (Output File - USB bellek)
+- bs: Blok boyutu (Hız için).
+- status=progress: İlerleme çubuğunu gösterir.

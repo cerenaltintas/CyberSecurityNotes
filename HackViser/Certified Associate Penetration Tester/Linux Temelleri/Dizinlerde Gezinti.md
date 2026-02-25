@@ -1,0 +1,233 @@
+Tipik bir grafik arayüzünde(masaüstü ortamında) fare kullanarak dizinlerde gezinebilirsiniz, ancak Linux terminalinde gezinmek, dosyalarla ve dizinlerle etkileşimde bulunmak için çeşitli komutları kullanmalısınız.
+
+Bu bölüm, dizinlerde gezinti, dosya listeleme, dosya yönetimi ve verimlilik için kısayolları kullanma dahil olmak üzere Linux gezinmenin temellerini öğretmek için hazırlanmıştır.
+
+### Dizin ve Yol (Path) Nedir?
+
+Linux'ta her şey bir dosyadır ve bu dosyalar **Dizin (Directory)** dediğimiz dizinlerin içinde düzenlenir.
+
+- **Kök Dizin (Root /):** Tüm sistemin başlangıç noktasıdır. Windows'taki C:\ gibidir ama Linux'ta tek bir kök vardır.
+
+- **Yol (Path):** Bir dosyanın adresi demektir.
+
+    - **Mutlak Yol (Absolute Path):** Adres tarifine en baştan (ü/) başlamaktır. Örn: /home/mehmet/resimler/tatil.jpg
+    
+    - **Göreceli Yol (Relative Path):** Adres tarifine "şu an bulunduğum yerden" başlamaktır. Örn: resimler/tatil.jpg
+
+### 1. Neredeyim? (pwd)
+
+pwd(Print Working Directory) komutu, şu an dosya sisteminin neresinde olduğunuzu gösterir.
+
+**Kullanım:**
+
+```auto
+user@hackerbox:~$ pwd
+/home/user
+```
+
+_Bu komut, "Şu anda /home/user_ dizininin içindesin" anlamına gelir.
+
+**Diğer Faydalı Komutlar:**
+
+- **realpath**: Bir dosyanın tam (mutlak) yolunu gösterir.
+    
+    ```auto
+    user@hackerbox:~$ realpath notlar.txt
+    /home/user/notlar.txt
+    ```
+    
+- **basename**: Yolun sadece dosya ismini verir.
+    
+    ```auto
+    user@hackerbox:~$ basename /home/user/notlar.txt
+    notlar.txt
+    ```
+    
+- **dirname**: Yolun sadece dizin kısmını verir.
+    
+    ```auto
+    user@hackerbox:~$ dirname /home/user/notlar.txt
+    /home/user
+    ```
+    
+
+### 2. Dizin Değiştirme (cd)
+
+cd(Change Directory) komutu ile bir dizinden diğerine geçiş yapılır.
+
+|Komut|Açıklama|Örnek Çıktı (Etkisi)|
+|---|---|---|
+|cd [dizin]|Belirtilen dizine girer.|Kullanıcıyı belirtilen dizine taşır.|
+|cd /tam/yol|Mutlak yol ile gider.|Kullanıcıyı tam yoldaki dizine taşır.|
+|cd ..|Bir üst dizine çıkar.|/home/user/Downloads<br><br> -> <br><br>/home/user|
+|cd ~|Ev dizinine döner.|/var/www<br><br> -> <br><br>/home/user|
+|cd -|Bir önceki konuma döner.|/etc<br><br> -> <br><br>/var/www|
+
+**Pratik Örnekler:**
+
+1. **Üst Dizine Çıkmak (****cd ..****):**
+    
+    ```auto
+    user@hackerbox:/var/www$ cd ..
+    user@hackerbox:/var$
+    ```
+    
+    _/var/www_ dizininden /var dizinine çıktık.
+    
+2. **Ev Dizinine Dönmek (****cd ~****):**
+    
+    ```auto
+    user@hackerbox:/var/log$ cd ~
+    user@hackerbox:~$
+    ```
+    
+    _Nerede olursanız olun sizi kendi eviniz olan_ /home/kullanici dizinine ışınlar.
+    
+3. **Önceki Dizine Dönmek (****cd -****):**
+    
+    ```auto
+    user@hackerbox:~$ cd /etc
+    user@hackerbox:/etc$ cd -
+    /home/user
+    user@hackerbox:~$
+    ```
+    
+    _Önce /etc_ dizinine gittik, sonra cd diyerek geldiğimiz yere geri döndük.
+    
+
+### 3. Listeleme (ls)
+
+ls(List) komutu, bir dizinin içindekileri gösterir. Tek başına kullanıldığında az bilgi verir, bu yüzden parametrelerle (bayraklarla) kullanılır.
+
+**Sık Kullanılan Parametreler Tablosu:**
+
+|Parametre|Açıklama|Örnek Çıktı|
+|---|---|---|
+|-l|**Uzun Liste (Long):** İzinleri, sahibi, boyutu ve tarihi detaylı gösterir.|drwxr-xr-x 2 user user 4096 ...|
+|-a|**Hepsi (All):** Gizli dosyaları (ismi <br><br>.<br><br> ile başlayan) da gösterir.|.bashrc .profile .|
+|-h|**Okunabilir (Human):** Dosya boyutunu Byte yerine KB, MB olarak gösterir.|4.0K<br><br>, <br><br>23M|
+|-t|**Zaman (Time):** Dosyaları değiştirilme tarihine göre sıralar (en yeni en üstte).|(Tarihe göre sıralı liste)|
+|-r|**Ters (Reverse):** Sıralamayı tersine çevirir.|(Z-A sıralı liste)|
+|-R|**Özyineli (Recursive):** Alt dizinlerin içini de listeler.|(Tüm dizin ağacı)|
+|-S|**Boyut (Size):** Dosyaları boyutuna göre sıralar (Büyükten küçüğe).|(Boyuta göre sıralı liste)|
+
+**Örnek Senaryo 1: Detaylı Listeleme (ls -l)**
+
+```auto
+user@hackerbox:~$ ls -l
+total 16
+drwxr-xr-x 2 user users 4096 Jul 29 08:24 Desktop
+drwxr-xr-x 2 user users 4096 Jul 29 08:24 Documents
+drwxr-xr-x 2 user users 4096 Jul 29 08:24 Downloads
+drwxr-xr-x 2 user users 4096 Jul 29 08:24 Pictures
+drwxr-xr-x 2 user users 4096 Jul 29 08:24 Videos
+-rw-r--r-- 1 user users 2100 Aug 01 12:00 notlar.txt
+-rwxr-xr-x 1 user users  500 Aug 01 11:00 script.sh
+```
+
+-l parametresi ile elde ettiğimiz çıktıda aşağıdaki yapıda olan sütunları görüyoruz:
+
+|Sütun içeriği|Açıklama|
+|---|---|
+|drwxr-xr-x|Dosya türü ve izinleri (d: dizin, -: dosya, rwx: izinler)|
+|2|Dosyaya/dizine verilen sabit bağlantı (hard link) sayısı|
+|user|Dosya/dizinin sahibi olan kullanıcı|
+|users|Dosya/dizinin sahibi olan grup|
+|4096|Dosyanın boyutu (Byte)|
+|Jul 29 08:24|Dosya/dizinin oluşturulma veya son düzenlenme tarihi|
+|Desktop|Dosya/dizinin ismi|
+
+_Burada_ Desktop ve Documents'ın dizin (d), diğerlerinin dosya (-) olduğunu, boyutlarını ve tarihlerini görüyoruz.
+
+**Örnek Senaryo 2: Gizli Dosyaları Görme (ls -la)
+
+```auto
+user@hackerbox:~$ ls -la
+total 32
+drwxr-xr-x 5 user user 4096 Oct 20 10:00 .
+drwxr-xr-x 3 root root 4096 Oct 20 09:00 ..
+-rw------- 1 user user  220 Oct 20 09:00 .bash_logout
+-rw------- 1 user user 3771 Oct 20 09:00 .bashrc
+-rw------- 1 user user  807 Oct 20 09:00 .profile
+drwxr-xr-x 2 user user 4096 Oct 20 10:00 Documents
+drwxr-xr-x 2 user user 4096 Oct 20 10:00 Downloads
+```
+
+_Normalde görmediğimiz .bashrc_ gibi ayar dosyaları ortaya çıktı. . (şu anki dizin) ve ..(üst dizin) de listelendi.
+
+**Örnek Senaryo 3: Tarihe Göre Sıralama (ls -lt)**
+
+```auto
+user@hackerbox:~$ ls -lt
+total 16
+-rw-r--r-- 1 user user 2100 Oct 20 12:00 notlar.txt
+-rwxr-xr-x 1 user user  500 Oct 20 11:00 script.sh
+drwxr-xr-x 2 user user 4096 Oct 20 10:00 Documents
+drwxr-xr-x 2 user user 4096 Oct 20 10:00 Downloads
+```
+
+_En son değiştirilen dosya (__notlar.txt__) en üstte görünüyor._
+
+**Örnek Senaryo 4: Tüm Alt Dizinleri Listeleme (ls -R)**
+
+```auto
+user@hackerbox:~$ ls -R
+.:
+Documents  Downloads  notlar.txt
+
+./Documents:
+Rapor.pdf  Resim.jpg
+
+./Downloads:
+installer.zip
+```
+
+_Sadece bulunduğumuz dizini değil, onun altındaki dizinlerin içeriğini de döktü._
+
+**Örnek Senaryo 5: Boyuta Göre Sıralama (ls -lS)**
+
+```auto
+user@hackerbox:~$ ls -lS
+-rw-r--r-- 1 user user 10485760 Oct 20 12:00 buyuk_dosya.iso
+drwxr-xr-x 2 user user     4096 Oct 20 10:00 Documents
+-rw-r--r-- 1 user user     2100 Oct 20 12:00 notlar.txt
+```
+
+_En büyük dosya (__buyuk_dosya.iso__) en üstte._
+
+### 4. Dizin Yığını (pushd ve popd)
+
+Bazen bir dizinde çalışırken geçici olarak başka bir yere bakıp geri gelmeniz gerekir.
+
+**Kullanım:**
+
+```auto
+user@hackerbox:~/proje$ pushd /var/log
+/var/log ~/proje
+user@hackerbox:/var/log$ popd
+~/proje
+user@hackerbox:~/proje$
+```
+
+_pushd_ ile /var/log'a ışınlandık ama eski yerimizi hafızaya attık. popd dediğimizde tam olarak kaldığımız yere (~/proje) geri döndük._
+
+### 5. Ağaç Görünümü (tree)
+
+Dizin yapısını bir ağaç dalı gibi görselleştirir.
+
+```auto
+user@hackerbox:~$ tree -L 2
+.
+├── Desktop
+├── Documents
+│   ├── Work
+│   │   └── ProjectA
+│   └── Personal
+│       └── Photos
+└── Downloads
+    └── installer.zip
+```
+
+_Dizinlerin iç içe yapısını tek bakışta anlamamızı sağlar._
+
+_-L 2_ parametresi sadece 2 seviye derine inmesini söyler.

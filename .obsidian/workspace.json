@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri.md",
+                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux'ta Dosya ve Dizinleri Bulma Yöntemleri.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux Temelleri"
+              "title": "Linux'ta Dosya ve Dizinleri Bulma Yöntemleri"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri.md",
+                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Metin Düzenleme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux Temelleri"
+              "title": "Metin Düzenleme"
             }
           }
         ],
@@ -184,6 +184,26 @@
             "id": "39c4faf5e2f811f8",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "07b9fbfc5b3522bf",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "b2e1add66eef2856",
+            "type": "leaf",
+            "state": {
               "type": "BC-matrix",
               "state": {},
               "icon": "BC-trail-icon",
@@ -191,7 +211,7 @@
             }
           },
           {
-            "id": "07b9fbfc5b3522bf",
+            "id": "cc6687629a7781db",
             "type": "leaf",
             "state": {
               "type": "BC-tree",
@@ -201,7 +221,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -222,15 +242,21 @@
       "breadcrumbs:Breadcrumbs Visualisation": false
     }
   },
-  "active": "6825c83a00f7a391",
+  "active": "cc6687629a7781db",
   "lastOpenFiles": [
+    "Clippings/Linux Temelleri  Hackviser.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Metin Düzenleme.md",
+    "Clippings",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux'ta Dosya ve Dizinleri Bulma Yöntemleri.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri.md",
-    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Dağıtımları.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Dosya ve Dizin İşlemleri.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Dizinlerde Gezinti.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri Giriş.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Kabuğu (Shell).md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Dağıtımları.md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Siber Güvenliğe Giriş.md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Untitled.md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Hacker.md",
-    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Kabuğu (Shell).md",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Siber Güvenliğin Alt Alanları.md",
     "Pasted image 20260225191645.png",
     "HackViser/Certified Associate Penetration Tester/Siber Güvenliğe Giriş/Temel Bilgiler.md",

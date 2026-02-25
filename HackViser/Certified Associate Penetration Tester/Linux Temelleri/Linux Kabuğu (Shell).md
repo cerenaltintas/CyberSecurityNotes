@@ -1,0 +1,193 @@
+### Kabuk Nedir ve Neden İhtiyacımız Var?
+Bir bilgisayarın donanımı (işlemci, ram, disk) tek başına bir işe yaramaz. Onları yönetecek bir çekirdeğe (Kernel) ihtiyaç duyarız. Ancak çekirdek de sadece 0 ve 1'lerden anlayan karmaşık bir yapıdır. İşte burada **Kabuk (Shell)** devreye girer.
+
+**Kabuğun Görevi:** Sizin yazdığınız "insan diline yakın" komutları (örn:ls-listele), çekirdeğin anlayacağı "makine diline" çevirir. Çekirdek işlemi yaptıktan sonra sonucu alır ve tekrar sizin anlayacağınız şekilde ekrana basar. Yani bir nevi **tercümanlık** yapar.
+
+Linux'ta iki ana tip kabuk vardır: **Komut Satırı (CLI)** ve **Grafik Arayüzü (GUI)**.
+
+### Komut Satırı (CLI)
+Komut satırı, metin tabanlı bir iletişim yöntemidir. Terminal adı verilen bir pencere açar ve komutları yazarak bilgisayarı yönetirsiniz.
+
+![](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/68a4d2f6-4913-4850-b2cd-ec08a7918b4c/terminal-example-2fe48b7c6.webp)
+
+**Neden Komut Satırı Kullanmalıyım?**
+
+- **Hız:** Dosya kopyalamak, program kurmak klavyeyle çok daha hızlıdır.
+- **Otomasyon:** Yüzlerce işlemi tek bir komut dosyası (script) ile yapabilirsiniz.
+- **Uzaktan Erişim:** Sunuculara SSH ile bağlandığınızda grafik arayüz yoktur, sadece komut satırı vardır.
+
+### Grafik Arayüzü (GUI)
+Windows veya macOS'ta olduğu gibi pencereler, ikonlar ve fare ile yönetilen arayüzdür.
+
+![](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/68a4d2f6-4913-4850-b2cd-ec08a7918b4c/gui-example-50294f77d.webp)
+
+### Kabuk Çeşitleri (Bash, Zsh, Fish)
+Linux'ta tek bir kabuk yoktur. İhtiyacınıza göre değiştirebilirsiniz.
+
+1. **Bash (Bourne Again Shell):** En yaygın ve standart kabuktur. Çoğu Linux dağıtımında varsayılan olarak gelir.
+2. **Zsh (Z Shell):** Bash ile uyumludur ancak daha gelişmiş otomatik tamamlama ve tema desteği sunar (macOS varsayılanı).
+3. **Fish:** Kullanıcı dostudur, komutları yazarken renklendirir ve önerilerde bulunur.
+
+**Hangi kabuğu kullandığınızı öğrenmek için:**
+
+```auto
+user@hackerbox:~$ echo $SHELL
+/bin/bash
+```
+
+Yukarıdaki çıktıda, sistemin bize yanıt olarak /bin/bash yolunu döndürdüğünü görüyoruz. Bu, şu anda aktif olarak Bash kabuğunu kullandığımız anlamına gelir.
+
+### Terminal Nedir?
+Terminal uygulaması, kullanıcıların kabukla etkileşim kurmasına olanak tanıyan bir kapı görevi görür, komutların girilebildiği ve çıktılarının görülebildiği metin tabanlı bir arayüz sunar.
+
+![](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/68a4d2f6-4913-4850-b2cd-ec08a7918b4c/terminal-searchbox-2440dfcad.webp)
+
+**Faydalı Terminal Komutları:**
+
+1. **clear(Ekranı Temizle):** Terminal ekranı komutlarla dolduğunda temizlemek için kullanılır.
+    
+    ```auto
+    user@hackerbox:~$ clear
+    ```
+    
+    _Bu komutu çalıştırdığınızda, önceki tüm çıktılar silinir ve imleç en üst satıra taşınır. Temiz bir sayfa açmış gibi olursunuz._
+    
+1. **history(Geçmiş Komutlar):** Daha önce çalıştırdığınız komutların listesini verir. Unuttuğunuz bir komutu bulmak için harikadır.
+    
+    ```auto
+    user@hackerbox:~$ history
+      1  ls
+      2  cd Documents
+      3  pwd
+      4  ping google.com
+      5  cat /etc/passwd
+      6  clear
+      7  whoami
+      8  sudo apt update
+      9  exit
+     10  history
+    ```
+    
+    _Çıktıda sol taraftaki numaralar komutun sıra numarasını gösterir. Örneğin !4 yazıp enter'a basarsanız 4. sıradaki ping google.com komutunu tekrar çalıştırır._
+    
+1. **type(Komut Türü):** Bir komutun gerçekte ne olduğunu (alias, builtin, dosya) gösterir.
+    
+    ```auto
+    user@hackerbox:~$ type ls
+    ls is aliased to `ls --color=auto'
+    user@hackerbox:~$ type cd
+    cd is a shell builtin
+    user@hackerbox:~$ type grep
+    grep is /usr/bin/grep
+    ```
+    
+	Burada ls komutunun aslında renkli çıktı vermesi için bir takma ad (alias) olduğunu, cd komutunun kabuğun içine gömülü (builtin) olduğunu ve grep komutunun diskte duran gerçek bir program olduğunu anlıyoruz.
+    
+
+### Kabuk Konfigürasyon Dosyaları (.bashrc, .zshrc)
+
+Terminal her açıldığında kabuk, ev dizininizdeki (/home/kullanici) bazı gizli ayar dosyalarını okur. Bu dosyalara kendi kısayollarınızı ekleyebilirsiniz.
+
+- **Bash kullanıyorsanız:** .bashrc
+    
+- **Zsh kullanıyorsanız:** .zshrc
+    
+
+**Örnek Senaryo:** Her seferinde clear yazmak yerine sadece c
+yazarak ekranı temizlemek istiyoruz.
+
+1. Dosyayı nano editörüyle açın: nano ~/.bashrc
+2. En alta şu satırı ekleyin: alias c='clear'
+3. Kaydedip çıkın (CTRL+O, Enter, CTRL+X).
+4. Ayarları yükleyin: source ~/.bashrc
+
+Şimdi terminale c yazalım:
+
+```auto
+user@hackerbox:~$ c
+```
+
+_Komut çalışacak ve ekran temizlenecektir. Bu yöntemle uzun ve karmaşık komutları kısaltabilirsiniz._
+
+### Çevre Değişkenleri (Environment Variables)
+
+İşletim sisteminin ve programların çalışma şeklini etkileyen dinamik değerlerdir.
+
+**En Önemli Değişkenler ve Örnek Çıktıları:**
+
+|Değişken|Açıklama|
+|---|---|
+|$HOME|Kullanıcının ev dizini.|
+|$USER|O anki kullanıcı adı.|
+|$PWD|Bulunulan dizin (Present Working Directory).|
+|$SHELL|Kullanılan kabuk programı.|
+|$PATH|Komutların arandığı dizinler listesi.|
+
+**Pratik Örnek: Değişkenleri Görüntüleme**
+
+```auto
+user@hackerbox:~$ echo $HOME
+/home/user
+
+user@hackerbox:~$ echo $USER
+user
+
+user@hackerbox:~$ echo $PWD
+/home/user/Desktop
+
+user@hackerbox:~$ printenv PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```
+
+_echo_ komutu değişkenin değerini ekrana basar. $PATH çıktısında, aralarında iki nokta (:) olan dizin yolları görürsünüz. Siz bir komut yazdığınızda Linux bu dizinlere sırasıyla bakar.
+
+### Komut Zincirleme Operatörleri
+
+Birden fazla komutu tek satırda yazmak için özel karakterler kullanılır.
+
+1. Sıralı Çalıştırma (;)
+
+Birinci komut bitince, hata verse bile ikinciyi çalıştırır.
+
+```auto
+user@hackerbox:~$ echo "Birinci Komut" ; date
+Birinci Komut
+Fri Oct 20 14:30:00 UTC 2023
+```
+
+_İlk komut metni yazdırdı, hemen ardından__date__komutu çalıştı ve tarihi gösterdi._
+
+2. Başarılıysa Devam Et (&&)
+
+Birinci komut **başarılı** olursa (hata vermezse) ikinciyi çalıştırır.
+
+```auto
+user@hackerbox:~$ mkdir test_dizinu && cd test_dizinu
+user@hackerbox:~/test_dizinu$ pwd
+/home/user/test_dizinu
+```
+
+_Burada__mkdir_başarılı olduğu için cd komutu çalıştı ve yeni dizinin içine girdik._
+
+3. Hata Varsa Çalıştır (||)
+
+Birinci komut **hata verirse** ikinciyi çalıştırır. Genellikle hata mesajı göstermek için kullanılır.
+
+```auto
+user@hackerbox:~$ cd olmayan_dizin || echo "Böyle bir dizin yok!"
+-bash: cd: olmayan_dizin: No such file or directory
+Böyle bir dizin yok!
+```
+
+_cd__komutu dizini bulamadığı için hata verdi, bunun üzerine || operatörü devreye girdi ve echo komutunu çalıştırdı._
+
+### Betiklerin Başlangıcı (Shebang #!)
+
+Bir metin dosyasının kabuk betiği (script) olduğunu belirtmek için ilk satırına **Shebang** (#!) eklenir.
+
+```auto
+#!/bin/bash
+echo "Merhaba Dünya"
+```
+
+Bu satır sisteme "Bu dosyayı /bin/bash programını kullanarak çalıştır" der.
