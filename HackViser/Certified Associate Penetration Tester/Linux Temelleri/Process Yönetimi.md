@@ -1,0 +1,176 @@
+### Process Nedir ve Nasıl Çalışır?
+
+Linux işletim sisteminde, o an çalışan her programa veya komuta **Process (Süreç)** denir. Siz bir programa (örneğin Firefox'a) tıkladığınızda veya terminale bir komut (örneğin ls ) yazdığınızda, işletim sistemi bu işlem için bellekte bir yer ayırır ve ona benzersiz bir kimlik numarası (PID) verir.
+
+**Process'lerin Temel Özellikleri:**
+
+- **PID (Process ID):** Her process'in TC Kimlik numarası gibi benzersiz bir numarası vardır.
+- **Sahip (User):** Process'i başlatan kullanıcıdır.
+- **Ebeveyn (Parent):** Bir process, başka bir process tarafından başlatılabilir. (Örneğin terminalden Firefox açarsanız, terminal "baba", Firefox "çocuk" process olur).
+
+Process'leri yönetmek, sistemin performansını kontrol etmek ve kilitlenen programları kapatmak için hayati önem taşır.
+
+### 1. Süreç Türleri
+
+Ön Plan (Foreground) Process'leri Varsayılan olarak tüm process'ler ön planda yürütülür. Klavyeden girdi alırlar ve ekrana çıktı sağlarlar. pwd komutunu çalıştırmak buna iyi bir örnektir.
+
+```auto
+user@hackerbox:~$ pwd
+/home/user
+```
+
+_Örnekte,_ _pwd_ _komutu tarafından yürütülen process ön planda çalışarak çıktı sağladı ve görevini yerine getirdikten sonra çıkış yaptı. Ön planda çalışan process'ler görevini yerine getirene kadar terminali kilitleyip, başka bir işlem yapmaya izin vermezler._
+
+**Arka Plan (Background) Process'leri**
+
+Arka plan process'leri, çalıştırıldığında terminali kitlemez ve arka planda çalışmaya başlar. Arka plan process'leri çalıştırıldığında, paralel olarak bir çok process çalıştırılabilir.
+
+Bir komutu arka planda çalıştırmak istersek sonuna & karakteri ekleyebiliriz.
+
+```auto
+user@hackerbox:~$ ping 127.0.0.1 &
+[1] 54017
+```
+
+_[1]_ _ifadesi, process'in iş (job) numarasının 1 olduğunu belirtiyor. 54017 ise process'in arka planındaki PID (Process ID) değeridir._
+
+### 2. Mevcut Terminal Oturumunda Çalışan Process'lerin Yönetimi
+
+Arka planda çalışan işleri listelemek için jobs kullanılır.
+
+```auto
+user@hackerbox:~$ jobs
+[1]    running    ping 127.0.0.1
+```
+
+Arka planda çalışan bu komutu tekrar ön plana almak için fg (foreground) komutunu kullanabiliriz.
+
+```auto
+user@hackerbox:~$ fg %1
+ping 127.0.0.1
+```
+
+Durdurmak için CTRL+C kullanabiliriz veya arka plana atıp duraklatmak için CTRL+Z kullanabiliriz.
+
+### 3. Sistem Genelinde Çalışan Process'lerin Yönetimi ( ps , top ) 
+
+Sadece mevcut terminal oturumumuzda değil, tüm sistemde çalışan process'ler de bulunmaktadır.
+
+**ps aux** : Tüm process'lerin anlık fotoğrafını çeker.
+
+```auto
+user@hackerbox:~$ ps aux | head -n 10
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 168436 10240 ?        Ss   08:00   0:02 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    08:00   0:00 [kthreadd]
+root        1234  0.0  0.5 123456 23456 ?        Sl   08:05   0:10 /usr/sbin/apache2
+syslog       850  0.0  0.0 220100  5000 ?        Ssl  08:00   0:01 /usr/sbin/rsyslogd -n
+message+     855  0.0  0.1   8500  4200 ?        Ss   08:00   0:01 /usr/bin/dbus-daemon --system
+root         950  0.0  0.1  15000  6500 ?        Ss   08:00   0:00 /usr/sbin/sshd -D
+mehmet      5432  1.5  3.2 567890 65432 pts/0    R+   10:30   0:05 python3 script.py
+mehmet      5433  0.0  0.1   9000  4000 pts/0    S+   10:31   0:00 tail -f log.txt
+root        6000  0.1  2.0 400000 50000 ?        S    09:00   0:15 /usr/bin/containerd
+```
+
+**Sütunların Anlamları:**
+
+|Sütun|Açıklama|
+|---|---|
+|**USER**|Process'i başlatan kullanıcı.|
+|**PID**|Process ID - process'in benzersiz kimlik numarası.|
+|**%CPU**|İşlemci kullanım oranı.|
+|**%MEM**|Bellek (RAM) kullanım oranı.|
+|**STAT**|Durum (R: Çalışıyor, S: Uyuyor, Z: Zombi).|
+|**START**|Başlangıç zamanı.|
+|**COMMAND**|Çalıştırılan komut.|
+
+**top** : Sistemdeki process'leri canlı olarak izlemek için kullanılır. (Çıkmak için q ).
+
+```auto
+top - 14:30:00 up 10 days,  4:20,  1 user,  load average: 0.05, 0.10, 0.05
+Tasks: 123 total,   1 running, 122 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.0 us,  0.5 sy,  0.0 ni, 98.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   3900.0 total,   1500.0 free,   1200.0 used,   1200.0 buff/cache
+```
+
+### 4. Çalışan Process'i Durdurmak (
+
+kill ) Çalışan process'leri durdurmak için kill komutu kullanılır. PID numarasına ihtiyaç duyar.
+
+```auto
+user@hackerbox:~$ kill 5432
+```
+
+**Süreç Sinyalleri (Process Signals):** Bir process'i durdurmak için ona sinyal göndeririz. kill varsayılan olarak 15 numaralı sinyali gönderir.
+
+|Sinyal No|Ad|Anlamı|
+|---|---|---|
+|**15**|**SIGTERM**|Nazikçe kapan. (Varsayılan). Dosyaları kaydetmeye izin verir.|
+|**9**|**SIGKILL**|Derhal öl. Kaydetmeye izin vermez. Zorla kapatır.|
+|**1**|**SIGHUP**|Yeniden başla (Config dosyasını tekrar oku).|
+|**2**|**SIGINT**|Kesme sinyali. Klavyeden <br><br>CTRL+C<br><br> tuşuna basıldığında gönderilir.|
+|**19**|**SIGSTOP**|Process'i duraklatır (Pause). <br><br>CTRL+Z<br><br> ile gönderilir.|
+|**18**|**SIGCONT**|Duraklatılmış process'i devam ettirir (Continue).|
+
+Eğer process normal kill ile kapanmıyorsa, zorla kapatmak için -9 kullanılır:
+
+```auto
+user@hackerbox:~$ kill -9 5432
+```
+
+**İsmine Göre Öldürme (** **pkill** **, killall ):** PID aramadan ismiyle kapatmak için:
+
+```auto
+user@hackerbox:~$ pkill python
+user@hackerbox:~$ killall firefox
+```
+
+### 5. Öncelik Ayarı (
+
+nice , renice ) Linux'ta process'lerin önceliği vardır (-20 en yüksek, 19 en düşük). Varsayılan 0'dır.
+
+- **nice**
+    
+    : Programı başlatırken öncelik verir.
+    
+    ```auto
+    user@hackerbox:~$ nice -n 10 tar -czf yedek.tar.gz /home
+    ```
+    
+    (Yedekleme işlemi düşük öncelikle çalışsın, bilgisayarı yormasın).
+    
+- **renice**
+    
+    : Çalışan process'in önceliğini değiştirir.
+    
+    ```auto
+    user@hackerbox:~$ renice -n -5 -p 5432
+    ```
+    
+
+### 6. Servis Yönetimi (
+
+systemd ) Modern Linux sistemlerinde (Ubuntu, CentOS vb.) arka plan servislerini systemd yönetir. Komut aracımız systemctl 'dir.
+
+**Örnek: Nginx Servisi**
+
+Durumunu gör:
+
+```auto
+user@hackerbox:~$ systemctl status nginx
+● nginx.service - A high performance web server
+   Active: active (running) since Mon 2023-10-01 ...
+```
+
+Başlat / Durdur:
+
+```auto
+sudo systemctl start nginx
+sudo systemctl stop nginx
+```
+
+Otomatik Başlat (Bilgisayar açılınca):
+
+```auto
+sudo systemctl enable nginx
+```

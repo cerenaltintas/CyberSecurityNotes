@@ -1,0 +1,368 @@
+Linux sunucuların kalbi ağdır. Modern sistemlerde eski komutların ( ifconfig , netstat ) yerini yenileri ( ip , ss ) almıştır. Ancak birçok sistemde hala eski araçlar da mevcuttur. Bu bölümde her iki araç setini de detaylıca inceleyeceğiz.
+
+### 1. Ağ Arayüzü Konfigürasyonu ( ifconfig ve ip )
+
+Ağ Nedir ve Temel Kavramlar
+
+Ağ yönetimine geçmeden önce temel kavramları anlamak önemlidir:
+
+- **IP Adresi (Internet Protocol Address):** Bilgisayarların ağ üzerinde birbirini bulmasını sağlayan kimlik numarasıdır (Örn: 192.168.1.50 ).
+- **MAC Adresi (Media Access Control):** Ağ kartının donanımsal, değişmeyen fiziksel adresidir (Örn: 00:1A:2B:3C:4D:5E ).
+- **Ağ Arayüzü (Network Interface):** Bilgisayarın ağa bağlandığı donanım veya yazılım kapısıdır (Örn: eth0 kablolu, wlan0 kablosuz).
+- **Gateway (Ağ Geçidi):** Yerel ağdan çıkıp internete gitmek için kullanılan çıkış kapısıdır (Genellikle modem IP'si).
+
+Mevcut Cihazları Listelemek
+
+ifconfig komutu parametresiz çağırıldığında mevcut ağ cihazlarını (NIC) ve detaylı istatistiklerini listeler. 
+```auto
+root@hackerbox:~$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.50  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a00:27ff:fe4e:66a1  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:4e:66:a1  txqueuelen 1000  (Ethernet)
+        RX packets 10542  bytes 1252144 (1.2 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8475  bytes 8213607 (7.8 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 152  bytes 11200 (10.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 152  bytes 11200 (10.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+_Yukarıdaki çıktıda_ _eth0_ _ethernet kartımızı, lo ise yerel (loopback) arayüzümüzü gösterir. Çıktıdaki inet IP adresimizi, ether MAC adresimizi, RX alınan paketleri, TX gönderilen paketleri gösterir._ DOWN durumda olan, yani aktif olmayan arayüzleri de görüntülemek için -a parametresini kullanabiliriz.
+
+```auto
+root@hackerbox:~$ ifconfig -a
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.20.1.109  netmask 255.255.255.0  broadcast 172.20.1.255
+        inet6 fe80::5054:ff:fe10:72c3  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:10:72:c3  txqueuelen 1000  (Ethernet)
+        RX packets 4542  bytes 352144 (343.8 KiB)
+        RX errors 2  dropped 0  overruns 0  frame 2
+        TX packets 1475  bytes 6213607 (5.9 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 11  memory 0xfc840000-fc860000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 16  bytes 1888 (1.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 16  bytes 1888 (1.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 0.0.0.0  netmask 0.0.0.0  broadcast 0.0.0.0
+        ether 52:54:00:ab:cd:ef  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+-a sayesinde, aşağıdaki gibi DOWN durumda (IP almamış) arayüzler de listelenir. Örnekte eth1 aktif değilken yine de çıktıda görünüyor.
+
+**Modern Yöntem (** **ip** **):**
+
+```auto
+user@hackerbox:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:4e:66:a1 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.50/24 brd 192.168.1.255 scope global dynamic eth0
+       valid_lft 86245sec preferred_lft 86245sec
+    inet6 fe80::a00:27ff:fe4e:66a1/64 scope link
+       valid_lft forever preferred_lft forever
+```
+
+**Arayüz Açıp Kapatmak**
+Bir ağ kartını (örn: eth0 ) devre dışı bırakmak veya açmak için:
+
+**Eski (** **ifconfig** **):**
+
+```auto
+root@hackerbox:~$ ifconfig eth0 down
+root@hackerbox:~$ ifconfig eth0 up
+```
+
+**Modern (** **ip** **):**
+
+```auto
+user@hackerbox:~$ sudo ip link set eth0 down
+user@hackerbox:~$ sudo ip link set eth0 up
+```
+
+**IP Adresi Atamak**
+
+Geçici olarak IP adresi atamak için:
+
+**Eski (** **ifconfig** **):** 
+```auto
+root@hackerbox:~$ ifconfig eth0 172.20.1.110 netmask 255.255.255.0
+```
+
+**Modern (** **ip** **):**
+
+```auto
+user@hackerbox:~$ sudo ip addr add 172.20.1.110/24 dev eth0
+```
+
+Promiscuous Mode (Trafiği İzleme Modu)
+
+Eğer ethernet kartınız destekliyorsa ağ arayüzünüze gelen ancak sizi ilgilendirmeyen paketleri de CPU'ya gönderip işlemenize olanak sağlayabilirsiniz. Böylece ağınızdaki sizinle alakalı olmayan trafiği de izleyebilirsiniz.
+
+Ağdaki tüm paketleri dinlemek için (Sniffing):
+
+- **Eski:** ifconfig eth0 promisc
+    
+- **Modern:** ip link set eth0 promisc on
+    
+
+MAC Adresini Değiştirmek
+
+Cihazınızın MAC adresini değiştirebilirsiniz. Ağdaki ARP tablolarının karışmasına sebep olabilir, bu yüzden dikkatli kullanmanızda fayda var.
+
+```auto
+root@hackerbox:~$ ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF
+```
+
+### 2. Port ve Bağlantı Kontrolü ( netstat ve ss )
+
+Sistemde hangi portların açık olduğunu ve kimin dinlediğini görmek güvenlik için kritiktir.
+
+**Eski Yöntem (** **netstat** **):**
+
+```auto
+root@hackerbox:~$ netstat -tulpn
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      950/sshd
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      800/postgres
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           700/dhclient
+```
+
+_Burada_ _sshd_ _servisinin 22. portu dinlediğini ( LISTEN ) görüyoruz._
+
+**Modern Yöntem (** **ss** **):**
+
+```auto
+user@hackerbox:~$ sudo ss -tulpn
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:Port Process
+tcp   LISTEN 0      128    0.0.0.0:22          0.0.0.0:*         users:(("sshd",pid=950,fd=3))
+tcp   LISTEN 0      128    127.0.0.1:5432      0.0.0.0:*         users:(("postgres",pid=800,fd=3))
+```
+
+- -t : TCP
+- -u : UDP
+- -l : Listening (Dinleyenler)
+- -p : Process (Hangi program)
+- -n : Numeric (İsim yerine sayı)
+
+### 3. Yönlendirme Tablosu (Routing Table)
+
+İnternete çıkış kapısını (Gateway) görmek için:
+
+**Eski (** **route** **):**
+
+```auto
+root@hackerbox:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG    100    0        0 eth0
+192.168.1.0     0.0.0.0         255.255.255.0   U     100    0        0 eth0
+```
+
+**Modern (** **ip route** **):**
+
+```auto
+user@hackerbox:~$ ip route
+default via 192.168.1.1 dev eth0 proto dhcp src 192.168.1.50 metric 100
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.50
+```
+
+### 4. Bağlantı Testi ( ping , nc , tracepath )
+
+- **ping** : Sunucuya erişimi test eder.
+    
+    ```auto
+    user@hackerbox:~$ ping -c 3 google.com
+    PING google.com (142.250.187.206) 56(84) bytes of data.
+    64 bytes from ...: icmp_seq=1 ttl=116 time=14.2 ms
+    ```
+    
+- **nc** **(Netcat)**: Spesifik bir portun açık olup olmadığını test eder (Telnet yerine).
+    
+    ```auto
+    user@hackerbox:~$ nc -zv 192.168.1.50 22
+    Connection to 192.168.1.50 22 port [tcp/ssh] succeeded!
+    ```
+    
+- **tracepath** : Paketin hedefe giderken hangi routerlardan geçtiğini gösterir.
+    
+    ```auto
+    user@hackerbox:~$ tracepath google.com
+    1?: [LOCALHOST]                                         pmtu 1500
+    1:  gateway (192.168.1.1)                                2.112ms
+    2:  10.0.0.1                                            10.200ms
+    ```
+    
+
+### 5. DNS Sorgulama ( dig , nslookup )
+
+Alan adının IP adresini bulur.
+
+**dig** **Kullanımı (Detaylı):**
+
+```auto
+user@hackerbox:~$ dig google.com +short
+142.250.187.206
+```
+
+**nslookup** **Kullanımı (Basit):**
+
+```auto
+user@hackerbox:~$ nslookup google.com
+Server:		127.0.0.53
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.187.206
+```
+
+6. DNS Ayarları
+
+Linux'ta DNS ayarları /etc/resolv.conf dosyası içerisinde yer almaktadır. nano gibi bir metin editörü ile bu dosya içerisindeki DNS ayarlarını güncelleyebiliriz.
+
+```auto
+root@hackerbox:~$ nano /etc/resolv.conf
+```
+
+Dosya içeriği aşağıdaki gibi olacaktır:
+
+```auto
+nameserver 172.20.1.1
+```
+
+Kullanmak istediğimiz DNS sunucularını satır satır bu formatta dosya içerisine yazabiliriz. Örneğin, Cloudflare'in sağladığı DNS sunucularını tüm sistemimizde kullanmak için dosyayı aşağıdaki şekilde güncellemeliyiz:
+
+```auto
+nameserver 1.1.1.1
+nameserver 1.0.0.1
+```
+
+### 7. Dosya Transferi
+
+- **wget** : Dosya indirmek için.
+    
+    ```auto
+    user@hackerbox:~$ wget https://example.com/dosya.zip
+    ```
+     - **curl** : Web isteği atmak ve başlıkları görmek için.
+    
+    ```auto
+    user@hackerbox:~$ curl -I https://google.com
+    HTTP/1.1 200 OK
+    ```
+    
+- **scp** : SSH üzerinden güvenli dosya kopyalamak için.
+    
+    ```auto
+    user@hackerbox:~$ scp rapor.pdf user@192.168.1.50:/home/user/Belgeler
+    ```
+    
+
+### 8. SSH (Secure Shell)
+
+SSH, ağ üzerinden başka bir bilgisayara güvenli bir şekilde bağlanmak ve komutlar çalıştırmak için kullanılan bir protokoldür. SSH, özellikle uzaktaki bilgisayarlara erişim ve yönetim için yaygın olarak kullanılır. SSH bağlantısı yaparken, 'ssh' komutu kullanılır.
+
+SSH Servisini Kurmak ve Başlatmak
+
+Öncelikle, SSH servisini kurmanız gerekebilir. Debian tabanlı bir sistemde, openssh-server paketini aşağıdaki komut ile kurabilirsiniz:
+
+```auto
+sudo apt-get update
+sudo apt-get install openssh-server
+```
+
+Kurulum tamamlandıktan sonra servisi başlatabilirsiniz:
+
+```auto
+sudo systemctl start ssh
+```
+
+SSH servisinin sistem açıldığında otomatik olarak başlamasını sağlamak için:
+
+```auto
+sudo systemctl enable ssh
+```
+
+SSH İle Uzaktaki Bir Sunucuya Bağlanmak Uzaktaki bir sunucuya bağlanmak için ssh komutunu şu şekilde kullanabilirsiniz:
+
+```auto
+ssh user@ip_address
+```
+
+Örneğin, kullanıcı adınız root ve sunucu adresiniz 192.168.1.100 ise: 
+```auto
+ssh root@192.168.1.100
+```
+
+Bu komutu çalıştırdıktan sonra, uzaktaki sunucunun parolasını girmeniz istenecektir.
+
+SSH Anahtar Çifti Oluşturmak
+
+Parola tabanlı oturum açma yöntemine ek olarak, SSH anahtar çifti kullanarak parolasız (ve daha güvenli) bir şekilde bağlanabilirsiniz. SSH anahtarı oluşturmak için ssh-keygen komutunu kullanabilirsiniz:
+
+```auto
+ssh-keygen
+```
+
+Bu komutu çalıştırdıktan sonra, oluşturulan açık anahtarı (public key) uzaktaki sunucuya kopyalamanız gerekecektir:
+
+```auto
+ssh-copy-id user@ip_address
+```
+
+Örneğin:
+
+```auto
+ssh-copy-id root@192.168.1.100
+```
+
+Bu işlem tamamlandıktan sonra, parola girmeden SSH ile bağlanabilirsiniz.
+
+**SSH Yapılandırma Dosyası**
+
+SSH yapılandırma ayarları genelde /etc/ssh/sshd_config dosyasında bulunur. Bu dosya üzerinde çeşitli SSH ayarlarını yapabilirsiniz. Örneğin, SSH portunu değiştirmek, root oturumlarını kapatmak gibi yapılandırmalar bu dosya üzerinde yapılabilir:
+
+```auto
+sudo nano /etc/ssh/sshd_config
+```
+
+Dosya içeriğinde, Port ayarını bulup düzenleyerek port numarasını değiştirebilirsiniz:
+
+```auto
+Port 2222
+```
+
+Değişiklikleri yaptıktan sonra SSH servisini yeniden başlatmanız gerekecektir:
+
+```auto
+sudo systemctl restart ssh
+```
+
+Bu bölümde SSH kullanımı hakkında temel bilgileri öğrendik. Şimdi, SSH ile ağ üzerinde güvenli bağlantılar kurabilir ve uzaktaki sunucuları yönetebilirsiniz.
+
+Bu değişiklikler ile ağ yönetimi bölümünüz kapsamlı bir şekilde güncellenmiş oldu.

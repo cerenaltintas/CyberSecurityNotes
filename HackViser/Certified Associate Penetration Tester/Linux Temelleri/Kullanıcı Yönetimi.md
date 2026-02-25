@@ -8,9 +8,7 @@ Linux, doğası gereği **çok kullanıcılı (multi-user)** bir işletim sistem
 
 - **Kimlik (Identity):** Her kullanıcının bir adı (username) ve benzersiz bir numarası (UID - User ID) vardır.
 - **İzolasyon:** Her kullanıcının kendine ait dosyaları, ayarları ve ev dizini ( /home/kullaniciadi ) vardır. Bir kullanıcı, izin verilmediği sürece diğerinin dosyalarını göremez.
-- **Yetki (Privilege):** Her kullanıcının yapabilecekleri sınırlıdır. Sadece root kullanıcısı (Süper Kullanıcı) her şeyi yapabilir. 
-Bu yapı, sistemin güvenliğini sağlar. Bir kullanıcı hata yapsa veya virüs bulaştırsa bile, bu durum diğer kullanıcıları veya sistemin genelini etkilemez (tabii ki root yetkisi yoksa).
-
+- **Yetki (Privilege):** Her kullanıcının yapabilecekleri sınırlıdır. Sadece root kullanıcısı (Süper Kullanıcı) her şeyi yapabilir. Bu yapı, sistemin güvenliğini sağlar. Bir kullanıcı hata yapsa veya virüs bulaştırsa bile, bu durum diğer kullanıcıları veya sistemin genelini etkilemez (tabii ki root yetkisi yoksa). 
 ### Kullanıcı Türleri
 
 Linux, iki tür kullanıcıyı destekler: sistem kullanıcıları ve normal kullanıcılar.
@@ -21,21 +19,9 @@ Linux, iki tür kullanıcıyı destekler: sistem kullanıcıları ve normal kull
 
 ### 1. Kullanıcı Oluşturma
 
-İki komut vardır:
+İki komut vardır: adduser (Kolay) ve useradd (Zor). 
 
-adduser
-
-(Kolay) ve
-
-useradd
-
-(Zor).
-
-**Önerilen Yöntem (**
-
-**adduser**
-
-**):** Size sorular sorar ve ev dizinini otomatik ayarlar.
+**Önerilen Yöntem (** **adduser** **):** Size sorular sorar ve ev dizinini otomatik ayarlar.
 
 ```auto
 user@hackerbox:~$ sudo adduser mehmet
@@ -51,44 +37,17 @@ Full Name []: Mehmet Yilmaz
 Is the information correct? [Y/n] Y
 ```
 
-**Alternatif Yöntem (**
-
-**useradd**
-
-**):**
+**Alternatif Yöntem (** **useradd** **):**
 
 ```auto
 user@hackerbox:~$ sudo useradd -m -s /bin/bash ali
 ```
 
--m
+-m : Ev dizini oluştur.
 
-: Ev dizini oluştur.
+-s : Shell'i belirle.
 
--s
-
-: Shell'i belirle.
-
-### 2. Kullanıcı Bilgilerini Görme (
-
-id
-
-, 
-
-who
-
-, 
-
-w
-
-)
-
-Bir kullanıcının kimliğini ve gruplarını görmek için
-
-id
-
-kullanılır.
-
+### 2. Kullanıcı Bilgilerini Görme ( id , who , w ) Bir kullanıcının kimliğini ve gruplarını görmek için id kullanılır. 
 ```auto
 user@hackerbox:~$ id mehmet
 uid=1001(mehmet) gid=1001(mehmet) groups=1001(mehmet)
@@ -96,11 +55,7 @@ uid=1001(mehmet) gid=1001(mehmet) groups=1001(mehmet)
 
 Sistemde kimlerin aktif olduğunu görmek için:
 
-- **
-    
-    who
-    
-    **: Kimler bağlı?
+-  who **: Kimler bağlı?
     
     ```auto
     user@hackerbox:~$ who
@@ -108,11 +63,7 @@ Sistemde kimlerin aktif olduğunu görmek için:
     mehmet   pts/1        2023-10-01 10:05 (192.168.1.6)
     ```
     
-- **
-    
-    w
-    
-    **: Kimler ne yapıyor?
+-  w **: Kimler ne yapıyor?
     
     ```auto
     user@hackerbox:~$ w
@@ -122,11 +73,7 @@ Sistemde kimlerin aktif olduğunu görmek için:
     mehmet   pts/1    192.168.1.6      10:05    2:00   0.05s  0.05s top
     ```
     
-- **
-    
-    last
-    
-    **: Kim ne zaman girdi?
+-  last **: Kim ne zaman girdi?
     
     ```auto
     user@hackerbox:~$ last
@@ -138,17 +85,7 @@ Sistemde kimlerin aktif olduğunu görmek için:
 
 Kullanıcı yönetiminde bilmeniz gereken üç temel dosya vardır.
 
-**a)**
-
-**/etc/passwd**
-
-**Dosyası:**
-
-Bu dosya, sistemdeki tüm kullanıcıların temel bilgilerini saklar. Sistemdeki herkes tarafından okunabilir. Her satır bir kullanıcıyı temsil eder ve
-
-:
-
-ile ayrılmış 7 alandan oluşur.
+**a)** **/etc/passwd** **Dosyası:** Bu dosya, sistemdeki tüm kullanıcıların temel bilgilerini saklar. Sistemdeki herkes tarafından okunabilir. Her satır bir kullanıcıyı temsil eder ve : ile ayrılmış 7 alandan oluşur.
 
 Örnek Satır:
 
@@ -163,27 +100,20 @@ ali:x:1002:1002::/home/ali:/bin/sh
 
 **Alanların Anlamları Tablosu:**
 
-|Sıra|Alan Adı|Örnek|Açıklama|
-|---|---|---|---|
-|1|**Kullanıcı Adı**|mehmet|Sisteme giriş yaparken kullanılan isim. 1-32 karakter arası olmalıdır.|
-|2|**Parola**|x|Eskiden burada parola yazardı. Şimdi güvenlik için <br><br>x<br><br> yazar, asıl parola <br><br>/etc/shadow<br><br> dosyasındadır.|
-|3|**UID**|1001|Kullanıcı Kimlik Numarası (User ID). Root her zaman 0'dır.|
-|4|**GID**|1001|Grup Kimlik Numarası (Group ID). Kullanıcının birincil grubu.|
-|5|**Açıklama**|Mehmet Yilmaz,,,|(GECOS) Kullanıcının tam adı, telefon numarası gibi ek bilgiler.|
-|6|**Ev Dizini**|/home/mehmet|Kullanıcı giriş yaptığında düştüğü dizin.|
-|7|**Kabuk (Shell)**|/bin/bash|Kullanıcının kullandığı komut yorumlayıcısı.|
+| Sıra | Alan Adı          | Örnek            | Açıklama                                                                                           |
+| ---- | ----------------- | ---------------- | -------------------------------------------------------------------------------------------------- |
+| 1    | **Kullanıcı Adı** | mehmet           | Sisteme giriş yaparken kullanılan isim. 1-32 karakter arası olmalıdır.                             |
+| 2    | **Parola**        | x                | Eskiden burada parola yazardı. Şimdi güvenlik için x yazar, asıl parola /etc/shadow dosyasındadır. |
+| 3    | **UID**           | 1001             | Kullanıcı Kimlik Numarası (User ID). Root her zaman 0'dır.                                         |
+| 4    | **GID**           | 1001             | Grup Kimlik Numarası (Group ID). Kullanıcının birincil grubu.                                      |
+| 5    | **Açıklama**      | Mehmet Yilmaz,,, | (GECOS) Kullanıcının tam adı, telefon numarası gibi ek bilgiler.                                   |
+| 6    | **Ev Dizini**     | /home/mehmet     | Kullanıcı giriş yaptığında düştüğü dizin.                                                          |
+| 7    | **Kabuk (Shell)** | /bin/bash        | Kullanıcının kullandığı komut yorumlayıcısı.                                                       |
 
 **b)**
 
-**/etc/shadow**
-
-**Dosyası:**
-
-Kullanıcıların parolarının hash (kriptolanmış) halini ve parola geçerlilik sürelerini saklar. Güvenlik nedeniyle sadece
-
-root
-
-kullanıcısı okuyabilir.
+**/etc/shadow** **Dosyası:** 
+Kullanıcıların parolarının hash (kriptolanmış) halini ve parola geçerlilik sürelerini saklar. Güvenlik nedeniyle sadece root kullanıcısı okuyabilir.
 
 Örnek Satır:
 
@@ -193,82 +123,45 @@ mehmet:$6$aB1...:19450:0:99999:7:::
 
 **Alanların Anlamları Tablosu:**
 
-|Alan|Açıklama|
-|---|---|
-|**Kullanıcı Adı**|Kullanıcının oturum açma adı.|
-|**Parola Hash'i**|$6$<br><br> ile başlıyorsa SHA-512 algoritmasıyla şifrelenmiştir. <br><br>!<br><br> veya <br><br>*<br><br> varsa hesap kilitlidir.|
-|**Son Değişiklik**|1 Ocak 1970'ten (Epoch) bu yana geçen gün sayısı.|
-|**Min Gün**|Parolanın tekrar değiştirilebilmesi için geçmesi gereken minimum gün.|
-|**Max Gün**|Parolanın geçerli olduğu maksimum gün sayısı (Süresi dolunca değiştirmek zorunludur).|
-|**Uyarı**|Parola süresi dolmadan kaç gün önce uyarı verileceği.|
+| Alan               | Açıklama                                                                                           |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| **Kullanıcı Adı**  | Kullanıcının oturum açma adı.                                                                      |
+| **Parola Hash'i**  | $6$<br><br> ile başlıyorsa SHA-512 algoritmasıyla şifrelenmiştir. ! veya * varsa hesap kilitlidir. |
+| **Son Değişiklik** | 1 Ocak 1970'ten (Epoch) bu yana geçen gün sayısı.                                                  |
+| **Min Gün**        | Parolanın tekrar değiştirilebilmesi için geçmesi gereken minimum gün.                              |
+| **Max Gün**        | Parolanın geçerli olduğu maksimum gün sayısı (Süresi dolunca değiştirmek zorunludur).              |
+| **Uyarı**          | Parola süresi dolmadan kaç gün önce uyarı verileceği.                                              |
 
 **c)**
 
-**/etc/skel**
+**/etc/skel** **Dizini (Skeleton):**
 
-**Dizini (Skeleton):**
+Yeni bir kullanıcı oluşturulduğunda (örneğin useradd -m ile), bu dizinin içindeki her şey yeni kullanıcının ev dizinine kopyalanır.
 
-Yeni bir kullanıcı oluşturulduğunda (örneğin
-
-useradd -m
-
-ile), bu dizinin içindeki her şey yeni kullanıcının ev dizinine kopyalanır.
-
-- Örneğin 
-    
-    .bashrc
-    
-     dosyasını buraya koyarsanız, yeni açılan her kullanıcının otomatik olarak bu ayarı almasını sağlarsınız.
-
-### 4. Kullanıcı Yönetimi (
-
-usermod
-
-)
-
-Mevcut bir kullanıcıyı değiştirmek için kullanılır.
-
-- **Gruba Ekleme (**
-    
-    **-aG**
-    
-    **):**
-    
+- Örneğin .bashrc dosyasını buraya koyarsanız, yeni açılan her kullanıcının otomatik olarak bu ayarı almasını sağlarsınız. 
+### 4. Kullanıcı Yönetimi ( usermod ) Mevcut bir kullanıcıyı değiştirmek için kullanılır. 
+- **Gruba Ekleme (** **-aG** **):** 
     ```auto
     sudo usermod -aG sudo mehmet
     ```
     
     (Mehmet artık yönetici yetkisine sahip).
     
-- **Hesabı Kilitleme (**
-    
-    **-L**
-    
-    **):**
-    
+- **Hesabı Kilitleme (** **-L** **):** 
     ```auto
     sudo usermod -L mehmet
     ```
     
     (Mehmet artık giriş yapamaz).
     
-- **Kilidi Açma (**
-    
-    **-U**
-    
-    **):**
+- **Kilidi Açma (** **-U** **):**
     
     ```auto
     sudo usermod -U mehmet
     ```
     
 
-### 5. Parola Zamanını Düzenleme (
-
-chage
-
-)
-
+### 5. Parola Zamanını Düzenleme ( chage ) 
 Kullanıcının parolasını ne zaman değiştirmesi gerektiğini ayarlar.
 
 ```auto
@@ -290,13 +183,4 @@ sudo chage -M 90 mehmet
 ```auto
 sudo userdel -r mehmet
 ```
-
-(
-
--r
-
-: Ev dizinini
-
-/home/mehmet
-
-ve içindeki dosyaları da sil demektir. Kullanılmazsa dosyalar kalır).
+ ( -r : Ev dizinini /home/mehmet ve içindeki dosyaları da sil demektir. Kullanılmazsa dosyalar kalır).

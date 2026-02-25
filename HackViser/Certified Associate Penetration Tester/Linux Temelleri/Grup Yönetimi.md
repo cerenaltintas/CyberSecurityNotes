@@ -1,0 +1,126 @@
+Linux işletim sistemlerinde, grup yönetimi de kullanıcı yönetimi kadar önem taşır. Gruplar, birden fazla kullanıcıya aynı erişim haklarını ve izinleri toplu olarak atamak için kullanılır. Bu sayede, sistem yöneticileri kaynakların ve erişimin kolayca kontrol edilmesini sağlayabilir. Bu bölümde, Linux'ta grupların nasıl oluşturulacağı, yönetileceği ve silineceği üzerine odaklanacağız.
+
+### Grup Nedir ve Neden Kullanılır?
+
+Linux sistemlerinde bir grup, belirli izinlere ve erişim haklarına sahip kullanıcıların topluluğudur. Gruplar, dosya sistemlerindeki erişim kontrolünü kolaylaştırmak ve kullanıcı yönetimini daha verimli hale getirmek için kullanılır.
+
+Bir şirkette çalıştığınızı düşünün. "Muhasebe" departmanındaki 50 kişinin, sadece muhasebe dosyalarına erişmesi gerekiyor. Eğer grup sistemi olmasaydı:
+
+1. 50 kişi için tek tek dosya izni ayarlamanız gerekirdi.
+2. Yeni biri işe başladığında yine tek tek izin vermeniz gerekirdi.
+
+Grup sistemi sayesinde:
+
+- Bir "Muhasebe" grubu oluşturursunuz.
+- Dosyaların iznini bu gruba verirsiniz.
+- 50 kullanıcıyı bu gruba eklersiniz.
+- Yeni biri geldiğinde sadece gruba eklemeniz yeterlidir.
+
+Özetle gruplar, **yetki yönetimini toplu hale getirerek işimizi kolaylaştırır ve güvenliği artırır.**
+
+### Temel Komutlar
+
+|Komut|Açıklama|
+|---|---|
+|groupadd|Grup oluşturur.|
+|groupdel|Grubu siler.|
+|groups|Üye olunan grupları gösterir.|
+|getent group|Bir grubun detaylarını gösterir.|
+
+/etc/group Dosyası ve Anlamı Grupların tanımlandığı dosya /etc/group dosyasıdır.
+
+```auto
+yazilim:x:1002:mehmet,ali
+```
+
+**Sütunların Anlamları:**
+
+|Alan|Örnek|Açıklama|
+|---|---|---|
+|**Grup Adı**|yazilim|Grubun ismi.|
+|**Parola**|x|Grup parolası (Genelde kullanılmaz).|
+|**GID**|1002|Grup Kimlik Numarası (Group ID).|
+|**Üyeler**|mehmet,ali|Gruba dahil kullanıcıların listesi.|
+
+**Örnek: Grup Oluşturma ve Sorgulama**
+
+```auto
+user@hackerbox:~$ sudo groupadd yazilim
+user@hackerbox:~$ getent group yazilim
+yazilim:x:1002:
+```
+
+### Gruba Üye Ekleme
+
+En güvenli yöntem usermod -aG kullanmaktır.
+
+**Örnek Senaryo: Mehmet'i 'yazilim' grubuna ekle**
+
+Önce kontrol edelim:
+
+```auto
+user@hackerbox:~$ id mehmet
+uid=1001(mehmet) gid=1001(mehmet) groups=1001(mehmet)
+```
+
+Ekleyelim:
+
+```auto
+user@hackerbox:~$ sudo usermod -aG yazilim mehmet
+```
+
+Tekrar kontrol edelim:
+
+```auto
+user@hackerbox:~$ id mehmet
+uid=1001(mehmet) gid=1001(mehmet) groups=1001(mehmet),1002(yazilim)
+```
+
+(Görüldüğü gibi yazilim grubu eklendi).
+
+**Dikkat:** -a (Append) kullanmazsanız, kullanıcının üye olduğu _diğer tüm grupları siler!_
+
+### Gruba Üye Çıkarma
+
+Kullanıcıyı gruptan çıkarmak için gpasswd kullanılabilir.
+
+```auto
+user@hackerbox:~$ sudo gpasswd -d mehmet yazilim
+Removing user mehmet from group yazilim
+```
+
+### Pratik Senaryo: Ortak Proje Dizini
+
+Bir proje dizini yapalım ve sadece proje grubundakiler erişebilsin.
+
+1. Grubu oluştur:
+    
+    ```auto
+    user@hackerbox:~$ sudo groupadd proje
+    ```
+    
+2. Kullanıcıyı ekle:
+    
+    ```auto
+    user@hackerbox:~$ sudo usermod -aG proje ali
+    ```
+    
+3. Dizini oluştur:
+    
+    ```auto
+    user@hackerbox:~$ sudo mkdir /opt/proje
+    ```
+    
+4. Dizinin grubunu değiştir:
+    
+    ```auto
+    user@hackerbox:~$ sudo chown :proje /opt/proje
+    ```
+    
+5. İzinleri ayarla:
+    
+    ```auto
+    user@hackerbox:~$ sudo chmod 770 /opt/proje
+    ```
+    
+    (Sahibi ve Grup tam yetkili, diğerleri giremez).
