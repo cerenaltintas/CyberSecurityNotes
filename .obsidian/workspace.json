@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#yıldız",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -227,7 +228,7 @@
       "breadcrumbs:Breadcrumbs Visualisation": false
     }
   },
-  "active": "65588a3e76d9acb5",
+  "active": "7401a109f55891b2",
   "lastOpenFiles": [
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/4.Dizinlerde Gezinti.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/3.Linux Kabuğu (Shell).md",
