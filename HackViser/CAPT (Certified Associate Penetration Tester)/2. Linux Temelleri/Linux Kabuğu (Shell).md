@@ -91,7 +91,6 @@ yazarak ekranı temizlemek istiyoruz.
 4. Ayarları yükleyin: source ~/.bashrc
 
 Şimdi terminale c yazalım:
-
 ```auto
 user@hackerbox:~$ c
 ```
@@ -99,7 +98,6 @@ user@hackerbox:~$ c
 _Komut çalışacak ve ekran temizlenecektir. Bu yöntemle uzun ve karmaşık komutları kısaltabilirsiniz._
 
 ### Çevre Değişkenleri (Environment Variables)
-
 İşletim sisteminin ve programların çalışma şeklini etkileyen dinamik değerlerdir.
 
 **En Önemli Değişkenler ve Örnek Çıktıları:**
