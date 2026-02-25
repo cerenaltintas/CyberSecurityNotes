@@ -1,0 +1,11 @@
+### Red Team
+Red Team, bir kuruluşun siber güvenliğini test etmek için saldırganın perspektifinden harkeet eden bir ekiptir. Amacı, potansiyel zafiyetleri ve güvenlik açıklarını keşfetmek, bu açıkları kullanarak sisteme sızmayı ve kuruluşun siber savunma yeteneklerini gerçekçi bir şekilde test etmektir. Red Team operasyonları, saldırı senaryoları, sızma testleri ve sosyal mühendislik taktikleri gibi çeşitli yöntemleri içerir. Bu takımın çalışmaları, kuruluşun savunmalarını gerçek dünya tehditlerine karşı ne kadar iyi hazırladığını anlamaya yardımcı olur.
+
+### Blue Team
+Blue Team, kuruluşun siber güvenlik savunmalarını güçlendirmek ve sürdürmekle görevlidir. Bu ekip, Red Team'in saldırı girişimlerine karşı kuruluşu savunur, güvenlik ihlallerini önlemek ve tespit etmek için sürekli olarak güvenlik önlemlerini izler ve geliştirir. Blue Team'in görevleri arasında güvenlik duvarlarının, sızma tespit sistemlerinin ve diğer güvenlik çözümlerinin monitor edilmesi ve yönetimi, olaylara müdahale, güvenlik politikalarının uygulanması ve çalışanlara güvenlik farkındalığı eğitimi vermek bulunur.
+
+### Purple Team
+Purple Team, Red ve Blue takımlarının çabalarını birleştirerek, kuruluşun siber güvenlik yeteneklerini maksimize etmeyi amaçlar. Purple Team, Red ve Blue takımları arasında bir köprü görevi görerek, her iki tarafın da birbirinden öğrenmesini ve gelişimini sağlar. Bu ekip, Red Team tarafından keşfedilen zafiyetlerin nasıl giderileceği konusunda Blue Team'e rehberlik eder ve savunma stratejilerinin etkinliğini artırmak için geri bildirimler sağlar.
+
+### Bug Bounty
+Bug Bounty (Zafiyet Avcılığı), son yıllarda giderek daha fazla popülerlik kazanan, şirketler için savunma stratejisi ve siber güvenlik araştırmacıları için gelir kaynağıdır. Bug bounty programlarında, belirtilen kapsamdaki yazılımlarda güvenlik zafiyetleri keşfeden ve bu zafiyetleri raporlayan siber güvenlik araştırmacıları para ile ödüllendirilir. Bu programlara sayesinde kuruluşlar siber saldırılara karşı daha dayanıklı bir hale gelirken, siber güvenlik araştırmacıları da gelir elde eder.
