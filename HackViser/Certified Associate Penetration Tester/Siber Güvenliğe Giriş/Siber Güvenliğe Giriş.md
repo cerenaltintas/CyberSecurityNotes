@@ -8,7 +8,7 @@ Bilgi Güvenliği İlkeleri: CIA Üçlüsü
 
 ![](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/d65a0fca-d9c9-4774-9397-42ef64272226/cia-653439271.webp)
 
-[[Giriş]]
+[[Siber Güvenliğe Giriş]]
 [[Hacker]]
 [[Kariyer]]
 [[Sızma Testi (Pentest)]]
