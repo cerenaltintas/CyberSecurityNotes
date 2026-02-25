@@ -1,4 +1,4 @@
-Linux [[Linux Temelleri Giriş]], tek bir işletim sistemi değil, Linux çekirdeği üzerine kurulu açık kaynaklı işletim sistemlerinin bir ailesidir. Bu varyantlar "dağıtımlar" veya "distrolar" olarak bilinir. Her dağıtım, çeşitli kullanıcı türleri, cihazlar ve amaçlar için özelleştirilmiş farklı bir Linux lezzeti sunar.
+Linux [[Linux Temelleri]], tek bir işletim sistemi değil, Linux çekirdeği üzerine kurulu açık kaynaklı işletim sistemlerinin bir ailesidir. Bu varyantlar "dağıtımlar" veya "distrolar" olarak bilinir. Her dağıtım, çeşitli kullanıcı türleri, cihazlar ve amaçlar için özelleştirilmiş farklı bir Linux lezzeti sunar.
 
 ### Bir Dağıtımın Temel Bileşenleri
 
