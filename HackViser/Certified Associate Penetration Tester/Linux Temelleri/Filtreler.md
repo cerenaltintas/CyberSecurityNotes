@@ -39,3 +39,34 @@ find komutu erişemediği dizinler için "Permission denied" hatası basar. Bunl
 user@hackerbox:~$ find / -name "gizli_dosya" 2> /dev/null
 /home/admin/gizli_dosya
 ```
+(Ekranda hata mesajları görünmez, sadece bulunan sonuç görünür).
+
+### 2. Metin İşleme Araçları
+
+Örnek olarak isimler.txt dosyamız olsun:
+
+```auto
+user@hackerbox:~$ cat isimler.txt
+Ali Veli
+Ayşe Yılmaz
+Mehmet Öz
+Ali Veli
+```
+
+**Cat**
+Cat komutunun temel amacı bir veya birden fazla metin dosyasının içeriğini terminalde göstermektir. Bu komutu kullanarak dosya içeriklerini hızlı bir şekilde görüntüleyebilmekteyiz.
+```auto
+root@hackerbox:~$ cat /etc/ssh/sshd_config
+# Port 22
+# AddressFamily any
+# ListenAddress 0.0.0.0
+# ListenAddress ::
+PermitRootLogin no
+PasswordAuthentication yes
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM yes
+```
+Yukarıdaki örnekte, SSH servisinin /etc/ssh/sshd_config yolundaki ayar dosyasının içeriği cat komutu ile ekrana yazdırılmıştır.
+
+**Head
