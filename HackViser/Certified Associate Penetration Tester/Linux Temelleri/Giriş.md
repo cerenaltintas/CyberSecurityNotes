@@ -1,3 +1,5 @@
+LIST FROM "Linux Temelleri"
+
 **Linux ve Windows Karşılaştırması**
 
 Linux'u anlamak için en yaygın kullanılan işletim sistemi olan Windows ile farklarına bakmak faydalıdır.
