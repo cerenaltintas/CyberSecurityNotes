@@ -1,6 +1,6 @@
 %%waypoint%%
 
-[[Linux Dağıtımları]]
+[Linux Dağıtımları]]
 [[Linux Kabuğu (Shell)]]
 [[Linux Temelleri Giriş]]
 [[Dizinlerde Gezinti]]

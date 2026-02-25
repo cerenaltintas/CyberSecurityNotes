@@ -1,0 +1,302 @@
+Linux işletim sistemlerinde kullanıcı yönetimi, sistem güvenliği ve kaynakların etkin bir şekilde paylaşımı açısından hayati bir öneme sahiptir. Bu bölümde, Linux'ta kullanıcıların nasıl oluşturulacağı, yönetileceği ve silineceği üzerine odaklanacağız.
+
+### Kullanıcı Nedir ve Neden Önemlidir?
+
+Linux, doğası gereği **çok kullanıcılı (multi-user)** bir işletim sistemidir. Bu, aynı bilgisayar üzerinde aynı anda birden fazla kişinin çalışabileceği anlamına gelir.
+
+**Kullanıcı Kavramı:**
+
+- **Kimlik (Identity):** Her kullanıcının bir adı (username) ve benzersiz bir numarası (UID - User ID) vardır.
+- **İzolasyon:** Her kullanıcının kendine ait dosyaları, ayarları ve ev dizini ( /home/kullaniciadi ) vardır. Bir kullanıcı, izin verilmediği sürece diğerinin dosyalarını göremez.
+- **Yetki (Privilege):** Her kullanıcının yapabilecekleri sınırlıdır. Sadece root kullanıcısı (Süper Kullanıcı) her şeyi yapabilir. 
+Bu yapı, sistemin güvenliğini sağlar. Bir kullanıcı hata yapsa veya virüs bulaştırsa bile, bu durum diğer kullanıcıları veya sistemin genelini etkilemez (tabii ki root yetkisi yoksa).
+
+### Kullanıcı Türleri
+
+Linux, iki tür kullanıcıyı destekler: sistem kullanıcıları ve normal kullanıcılar.
+
+**Sistem kullanıcıları** sistem tarafından kurulum sırasında oluşturulur ve sistem servisleri ile uygulamaları çalıştırmak için kullanılır.
+
+**Normal kullanıcılar** yönetici tarafından oluşturulur ve izinlerine bağlı olarak sisteme ve kaynaklarına erişebilirler.
+
+### 1. Kullanıcı Oluşturma
+
+İki komut vardır:
+
+adduser
+
+(Kolay) ve
+
+useradd
+
+(Zor).
+
+**Önerilen Yöntem (**
+
+**adduser**
+
+**):** Size sorular sorar ve ev dizinini otomatik ayarlar.
+
+```auto
+user@hackerbox:~$ sudo adduser mehmet
+Adding user `mehmet' ...
+Adding new group `mehmet' (1001) ...
+Adding new user `mehmet' (1001) with group `mehmet' ...
+Creating home directory `/home/mehmet' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Full Name []: Mehmet Yilmaz
+Is the information correct? [Y/n] Y
+```
+
+**Alternatif Yöntem (**
+
+**useradd**
+
+**):**
+
+```auto
+user@hackerbox:~$ sudo useradd -m -s /bin/bash ali
+```
+
+-m
+
+: Ev dizini oluştur.
+
+-s
+
+: Shell'i belirle.
+
+### 2. Kullanıcı Bilgilerini Görme (
+
+id
+
+, 
+
+who
+
+, 
+
+w
+
+)
+
+Bir kullanıcının kimliğini ve gruplarını görmek için
+
+id
+
+kullanılır.
+
+```auto
+user@hackerbox:~$ id mehmet
+uid=1001(mehmet) gid=1001(mehmet) groups=1001(mehmet)
+```
+
+Sistemde kimlerin aktif olduğunu görmek için:
+
+- **
+    
+    who
+    
+    **: Kimler bağlı?
+    
+    ```auto
+    user@hackerbox:~$ who
+    root     pts/0        2023-10-01 10:00 (192.168.1.5)
+    mehmet   pts/1        2023-10-01 10:05 (192.168.1.6)
+    ```
+    
+- **
+    
+    w
+    
+    **: Kimler ne yapıyor?
+    
+    ```auto
+    user@hackerbox:~$ w
+     10:10:01 up 1 day,  2 users,  load average: 0.00, 0.01, 0.05
+    USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+    root     pts/0    192.168.1.5      10:00    1.00s  0.10s  0.00s w
+    mehmet   pts/1    192.168.1.6      10:05    2:00   0.05s  0.05s top
+    ```
+    
+- **
+    
+    last
+    
+    **: Kim ne zaman girdi?
+    
+    ```auto
+    user@hackerbox:~$ last
+    mehmet   pts/1        192.168.1.6      Sun Oct  1 10:05   still logged in
+    ```
+    
+
+### 3. Kritik Dosyalar
+
+Kullanıcı yönetiminde bilmeniz gereken üç temel dosya vardır.
+
+**a)**
+
+**/etc/passwd**
+
+**Dosyası:**
+
+Bu dosya, sistemdeki tüm kullanıcıların temel bilgilerini saklar. Sistemdeki herkes tarafından okunabilir. Her satır bir kullanıcıyı temsil eder ve
+
+:
+
+ile ayrılmış 7 alandan oluşur.
+
+Örnek Satır:
+
+```auto
+root@hackerbox:~$ cat /etc/passwd | tail -n 5
+cups-pk-helper:x:111:117:user for cups-pk-helper service,,,:/home/cups-pk-helper:/bin/false
+gnome-initial-setup:x:112:118::/run/gnome-initial-setup/:/bin/false
+gdm:x:113:119:Gnome Display Manager:/var/lib/gdm3:/bin/false
+mehmet:x:1001:1001:Mehmet Yilmaz,,,:/home/mehmet:/bin/bash
+ali:x:1002:1002::/home/ali:/bin/sh
+```
+
+**Alanların Anlamları Tablosu:**
+
+|Sıra|Alan Adı|Örnek|Açıklama|
+|---|---|---|---|
+|1|**Kullanıcı Adı**|mehmet|Sisteme giriş yaparken kullanılan isim. 1-32 karakter arası olmalıdır.|
+|2|**Parola**|x|Eskiden burada parola yazardı. Şimdi güvenlik için <br><br>x<br><br> yazar, asıl parola <br><br>/etc/shadow<br><br> dosyasındadır.|
+|3|**UID**|1001|Kullanıcı Kimlik Numarası (User ID). Root her zaman 0'dır.|
+|4|**GID**|1001|Grup Kimlik Numarası (Group ID). Kullanıcının birincil grubu.|
+|5|**Açıklama**|Mehmet Yilmaz,,,|(GECOS) Kullanıcının tam adı, telefon numarası gibi ek bilgiler.|
+|6|**Ev Dizini**|/home/mehmet|Kullanıcı giriş yaptığında düştüğü dizin.|
+|7|**Kabuk (Shell)**|/bin/bash|Kullanıcının kullandığı komut yorumlayıcısı.|
+
+**b)**
+
+**/etc/shadow**
+
+**Dosyası:**
+
+Kullanıcıların parolarının hash (kriptolanmış) halini ve parola geçerlilik sürelerini saklar. Güvenlik nedeniyle sadece
+
+root
+
+kullanıcısı okuyabilir.
+
+Örnek Satır:
+
+```auto
+mehmet:$6$aB1...:19450:0:99999:7:::
+```
+
+**Alanların Anlamları Tablosu:**
+
+|Alan|Açıklama|
+|---|---|
+|**Kullanıcı Adı**|Kullanıcının oturum açma adı.|
+|**Parola Hash'i**|$6$<br><br> ile başlıyorsa SHA-512 algoritmasıyla şifrelenmiştir. <br><br>!<br><br> veya <br><br>*<br><br> varsa hesap kilitlidir.|
+|**Son Değişiklik**|1 Ocak 1970'ten (Epoch) bu yana geçen gün sayısı.|
+|**Min Gün**|Parolanın tekrar değiştirilebilmesi için geçmesi gereken minimum gün.|
+|**Max Gün**|Parolanın geçerli olduğu maksimum gün sayısı (Süresi dolunca değiştirmek zorunludur).|
+|**Uyarı**|Parola süresi dolmadan kaç gün önce uyarı verileceği.|
+
+**c)**
+
+**/etc/skel**
+
+**Dizini (Skeleton):**
+
+Yeni bir kullanıcı oluşturulduğunda (örneğin
+
+useradd -m
+
+ile), bu dizinin içindeki her şey yeni kullanıcının ev dizinine kopyalanır.
+
+- Örneğin 
+    
+    .bashrc
+    
+     dosyasını buraya koyarsanız, yeni açılan her kullanıcının otomatik olarak bu ayarı almasını sağlarsınız.
+
+### 4. Kullanıcı Yönetimi (
+
+usermod
+
+)
+
+Mevcut bir kullanıcıyı değiştirmek için kullanılır.
+
+- **Gruba Ekleme (**
+    
+    **-aG**
+    
+    **):**
+    
+    ```auto
+    sudo usermod -aG sudo mehmet
+    ```
+    
+    (Mehmet artık yönetici yetkisine sahip).
+    
+- **Hesabı Kilitleme (**
+    
+    **-L**
+    
+    **):**
+    
+    ```auto
+    sudo usermod -L mehmet
+    ```
+    
+    (Mehmet artık giriş yapamaz).
+    
+- **Kilidi Açma (**
+    
+    **-U**
+    
+    **):**
+    
+    ```auto
+    sudo usermod -U mehmet
+    ```
+    
+
+### 5. Parola Zamanını Düzenleme (
+
+chage
+
+)
+
+Kullanıcının parolasını ne zaman değiştirmesi gerektiğini ayarlar.
+
+```auto
+user@hackerbox:~$ sudo chage -l mehmet
+Last password change					: Aug 01, 2023
+Password expires					: never
+Password inactive					: never
+Account expires						: never
+```
+
+**Örnek: Parola 90 günde bir değişsin**
+
+```auto
+sudo chage -M 90 mehmet
+```
+
+### 6. Kullanıcı Silme
+
+```auto
+sudo userdel -r mehmet
+```
+
+(
+
+-r
+
+: Ev dizinini
+
+/home/mehmet
+
+ve içindeki dosyaları da sil demektir. Kullanılmazsa dosyalar kalır).
