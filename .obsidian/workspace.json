@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Filtreler.md",
+                "file": "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Paket Yönetimi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Filtreler"
+              "title": "Paket Yönetimi"
             }
           }
         ],
@@ -245,6 +245,7 @@
   "active": "6825c83a00f7a391",
   "lastOpenFiles": [
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Linux Temelleri.md",
+    "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Paket Yönetimi.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Filtreler.md",
     "HackViser/Certified Associate Penetration Tester/Linux Temelleri/Metin Düzenleme.md",
     "Clippings/Linux Temelleri  Hackviser.md",
