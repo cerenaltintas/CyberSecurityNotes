@@ -54,7 +54,7 @@
       "name": "crn",
       "data": [
         {
-          "search": " \\n+",
+          "search": "\\s+",
           "replace": " "
         }
       ]

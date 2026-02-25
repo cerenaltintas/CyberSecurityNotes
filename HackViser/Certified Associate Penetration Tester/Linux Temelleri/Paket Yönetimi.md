@@ -191,9 +191,7 @@ dpkg: dependency problems prevent configuration of discord:
 
 **Hata Alırsanız:**
 
-dpkg
-
-bağımlılıkları çözemez. Kurulum yarıda kalırsa düzeltmek için:
+dpkg bağımlılıkları çözemez. Kurulum yarıda kalırsa düzeltmek için:
 
 ```auto
 user@hackerbox:~$ sudo apt install -f
