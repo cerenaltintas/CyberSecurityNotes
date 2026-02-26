@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/9.Paket Yönetimi.md",
+                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/10.Kullanıcı Yönetimi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9.Paket Yönetimi"
+              "title": "10.Kullanıcı Yönetimi"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "6979ccb01ba2db03",
@@ -229,6 +228,7 @@
   },
   "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
+    "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/9.Paket Yönetimi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/8.Filtreler.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri/8.Kriptoanaliz Teknikleri.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri/7.Kriptografik Protokoller.md",
@@ -254,7 +254,6 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/4.Windows'u Konfigüre Etme.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/3.Windows'ta hizmetler ve işlemler.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/2.Giriş.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/1.Windows'un Mimarisi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4. Windows Komut Satırı Kullanımı",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri",
