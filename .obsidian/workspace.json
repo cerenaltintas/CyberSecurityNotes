@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/7.Windows Güvenliğini Sağlamak.md",
+                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/4. Windows Komut Satırı Kullanımı/6.PowerShell ile Kullanıcı Yönetimi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7.Windows Güvenliğini Sağlamak"
+              "title": "6.PowerShell ile Kullanıcı Yönetimi"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "6979ccb01ba2db03",
@@ -229,13 +228,13 @@
   },
   "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
-    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/6.Cihaz Güvenliğini Sağlamak.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/7.Windows Güvenliğini Sağlamak.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/5.Command Line Interface (CLI).md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/6.Cihaz Güvenliğini Sağlamak.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/4.Windows'u Konfigüre Etme.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/3.Windows'ta hizmetler ve işlemler.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/2.Giriş.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/1.Windows'un Mimarisi.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/7.Windows Güvenliğini Sağlamak.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/3. Windows Temelleri/2.Giriş.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/10.Kullanıcı Yönetimi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/6.Linux'ta Dosya ve Dizinleri Bulma Yöntemleri.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/2. Linux Temelleri/5.Dosya ve Dizin İşlemleri.md",
