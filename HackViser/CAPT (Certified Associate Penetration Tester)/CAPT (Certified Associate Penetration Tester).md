@@ -6,6 +6,7 @@
 - **[[5. Kriptoloji Temelleri]]**
 - **[[6.Ağ Temelleri]]**
 - **[[7.Nmap ile Ağ Tarama]]**
+- **[[8.Metasploit Framework Kullanımı]]**
 - [[CAPT (Certified Associate Penetration Tester)]]
 
 %% End Waypoint %%

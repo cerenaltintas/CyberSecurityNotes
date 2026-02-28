@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "6979ccb01ba2db03",
@@ -239,6 +238,11 @@
   },
   "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/8.Metasploit Framework Kullanımı.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/1.Giriş.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/7.Nmap ile Ağ Tarama.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/CAPT (Certified Associate Penetration Tester).md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/14.Nmap Scripting Engine (NSE).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/13.İşletim Sistemi Tespiti.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/12.Servis Versiyon Tespiti.md",
@@ -252,10 +256,7 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/4.Port Tarama.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/3.Host Keşfi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/2.Genel Bakış.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/1.Giriş.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/7.Nmap ile Ağ Tarama.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/15.Nmap Scripting Engine (NSE).md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/CAPT (Certified Associate Penetration Tester).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama",
     "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/11.IP Subnetting (Alt Ağ Oluşturma ).md",
     "Başlıksız 2",
@@ -268,7 +269,6 @@
     "Pasted image 20260228221139.png",
     "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/5.İletişim Modları ve Türleri.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/4.Ağ topolojisi.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/3.Ağ Cihazları.md",
     "Başlıksız 1/0d336e49-6d86-44fc-8ba6-1ac4f0332a96_ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea/ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea-Part-1/image.png",
     "Başlıksız 1/0d336e49-6d86-44fc-8ba6-1ac4f0332a96_ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea/ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea-Part-1",
     "Başlıksız 1/0d336e49-6d86-44fc-8ba6-1ac4f0332a96_ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea/ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea-Part-1.zip",
@@ -277,7 +277,6 @@
     "Başlıksız 1",
     "Başlıksız",
     "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/5. Kriptoloji Temelleri",
     "Pasted image 20260225191645.png"
   ]
 }
