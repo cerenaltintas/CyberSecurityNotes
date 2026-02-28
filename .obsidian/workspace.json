@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "6979ccb01ba2db03",
@@ -238,7 +239,6 @@
   },
   "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
-    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/7.Nmap ile Ağ Tarama.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/14.Nmap Scripting Engine (NSE).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/13.İşletim Sistemi Tespiti.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/12.Servis Versiyon Tespiti.md",
@@ -253,6 +253,7 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/3.Host Keşfi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/2.Genel Bakış.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/1.Giriş.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/7.Nmap ile Ağ Tarama.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/15.Nmap Scripting Engine (NSE).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/CAPT (Certified Associate Penetration Tester).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama",
