@@ -25,10 +25,14 @@
             "id": "7eb2b9554305f187",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Grafik Görünümü"
+              "type": "markdown",
+              "state": {
+                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/2.İstemci ve Sunucu Modeli.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2.İstemci ve Sunucu Modeli"
             }
           }
         ],
@@ -237,8 +241,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7eb2b9554305f187",
+  "active": "b3303defa3022f0e",
   "lastOpenFiles": [
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/2.Modern Web Nasıl Çalışır.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/2.İstemci ve Sunucu Modeli.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/1.Giriş.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/5.Web Uygulama Güvenliği.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/1.Web Temelleri/4.Hypertext Transfer Protocol (HTTP).md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/1.Web Temelleri/1.Web Temelleri.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/1.Web Temelleri/3.Domain Name System (DNS).md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/1.Web Temelleri/2.İstemci ve Sunucu Modeli.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/1.Web Temelleri/1.Giriş.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/1.Web Temelleri",
     "HackViser/CAPT (Certified Associate Penetration Tester)/1.Başlangıç/1. Siber Güvenliğe Giriş/2.Hacker.md",
     "image.png.md",
     "Başlıksız/Başlıksız.md",
@@ -247,7 +262,6 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/8.Sosyal Mühendislik/8.Sosyal Mühendislik.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Açık Kaynak İstihbaratı (OSINT)/7.Açık Kaynak İstihbaratı (OSINT).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/6.Yetki Yükseltme Teknikleri/6.Yetki Yükseltme Teknikleri.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/5.Web Uygulama Güvenliği.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/4.Ağ Güvenliği ve Sızma Testi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3.Kriptoloji Temelleri/3.Kriptoloji Temelleri.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/2.İşletim Sistemleri Temelleri/2.İşletim Sistemleri Temelleri.md",
@@ -257,10 +271,6 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/3.Metasploit Framework Kullanımı.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/2.Nmap ile Ağ Tarama.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/1.Ağ Temelleri/1.Ağ Temelleri.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/3.Kriptoloji Temelleri/1. Kriptoloji Temelleri/1. Kriptoloji Temelleri.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/2.İşletim Sistemleri Temelleri/3. Windows Komut Satırı Kullanımı/3. Windows Komut Satırı Kullanımı.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/2.İşletim Sistemleri Temelleri/2. Windows Temelleri/2. Windows Temelleri.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/2.İşletim Sistemleri Temelleri/1. Linux Temelleri/1. Linux Temelleri.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/9.Gerçek Dünya Senaryoları",
     "HackViser/CAPT (Certified Associate Penetration Tester)/8.Sosyal Mühendislik",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Açık Kaynak İstihbaratı (OSINT)",
@@ -268,13 +278,7 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi",
     "HackViser/CAPT (Certified Associate Penetration Tester)/1.Başlangıç",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/Başlıksız.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/3.Kriptoloji Temelleri",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/2.İşletim Sistemleri Temelleri",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/11.MSFvenom.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/10.Meterpreter.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/9.Evasion.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı",
     "Pasted image 20260228222155.png",
     "Pasted image 20260228221139.png",
     "Başlıksız 1/0d336e49-6d86-44fc-8ba6-1ac4f0332a96_ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea/ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea-Part-1/image.png",
