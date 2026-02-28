@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "6979ccb01ba2db03",
@@ -238,6 +239,7 @@
   },
   "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
+    "Pasted image 20260228222155.png",
     "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/10.Media Access Control Address (MAC).md",
     "Pasted image 20260228221139.png",
     "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/9.Protokoller ve Port.md",
