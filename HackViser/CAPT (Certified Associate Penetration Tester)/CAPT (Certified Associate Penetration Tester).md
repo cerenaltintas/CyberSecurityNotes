@@ -1,12 +1,13 @@
 %% Begin Waypoint %%
-- **[[1. Siber Güvenliğe Giriş]]**
-- **[[2. Linux Temelleri]]**
-- **[[3. Windows Temelleri]]**
-- **[[4. Windows Komut Satırı Kullanımı]]**
-- **[[5. Kriptoloji Temelleri]]**
-- **[[6.Ağ Temelleri]]**
-- **[[7.Nmap ile Ağ Tarama]]**
-- **[[8.Metasploit Framework Kullanımı]]**
+- **[[1.Başlangıç]]**
+- **[[2.İşletim Sistemleri Temelleri]]**
+- **[[3.Kriptoloji Temelleri]]**
+- **[[4.Ağ Güvenliği ve Sızma Testi]]**
+- **[[5.Web Uygulama Güvenliği]]**
+- **[[6.Yetki Yükseltme Teknikleri]]**
+- **[[7.Açık Kaynak İstihbaratı (OSINT)]]**
+- **[[8.Sosyal Mühendislik]]**
+- **[[9.Gerçek Dünya Senaryoları]]**
 - [[CAPT (Certified Associate Penetration Tester)]]
 
 %% End Waypoint %%
