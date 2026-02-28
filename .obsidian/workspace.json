@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/Başlıksız.md",
+                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/11.MSFvenom.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Başlıksız"
+              "title": "11.MSFvenom"
             }
           },
           {
@@ -238,10 +238,17 @@
   },
   "active": "65588a3e76d9acb5",
   "lastOpenFiles": [
-    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/Başlıksız 2.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/8.Metasploit Framework Kullanımı.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/Başlıksız.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/Başlıksız 1.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/11.MSFvenom.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/10.Meterpreter.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/9.Evasion.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/8.Nops (No Operations).md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/7.Kodlayıcılar (Encoder).md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/6.Exploit Sonrası.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/5.Payloadlar.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/4.Exploit Modülü.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/3.Auxiliary Modülü.md",
+    "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/2.MSFConsole.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/8.Metasploit Framework Kullanımı/1.Giriş.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/3.Host Keşfi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/2.Genel Bakış.md",
@@ -258,15 +265,8 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/8.TCP FIN, NULL ve Xmas Tarama (-sF, -sN, -sX).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/7.UDP Tarama (-sU).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/6.TCP Connect Tarama (-sT).md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/5.TCP SYN (Stealth) Tarama (-sS).md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/4.Port Tarama.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama/15.Nmap Scripting Engine (NSE).md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/7.Nmap ile Ağ Tarama",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/11.IP Subnetting (Alt Ağ Oluşturma ).md",
     "Başlıksız 2",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/10.Media Access Control Address (MAC).md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/9.Protokoller ve Port.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/6.Ağ Temelleri/8.TCP-IP Modeli.md",
     "Pasted image 20260228222155.png",
     "Pasted image 20260228221139.png",
     "Başlıksız 1/0d336e49-6d86-44fc-8ba6-1ac4f0332a96_ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea/ExportBlock-50a6797e-5f87-40e2-9a34-8693b5f30aea-Part-1/image.png",
