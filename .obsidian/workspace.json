@@ -27,16 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CAPT (Certified Associate Penetration Tester)/CAPT (Certified Associate Penetration Tester).md",
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/1.Giriş.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CAPT (Certified Associate Penetration Tester)"
+              "title": "1.Giriş"
+            }
+          },
+          {
+            "id": "c94e8ecc6207d62f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Yeni sekme"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -241,8 +251,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7eb2b9554305f187",
+  "active": "c94e8ecc6207d62f",
   "lastOpenFiles": [
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/1.Giriş.md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/3.Metasploit Framework Kullanımı.md",
+    "CAPT (Certified Associate Penetration Tester)/CAPT (Certified Associate Penetration Tester).md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection/9.SQL Injection'dan Korunma Yöntemleri.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection/9.SQL Injection.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection/8.Boolean Based SQL Injection.md",
@@ -269,9 +282,6 @@
     "CAPT (Certified Associate Penetration Tester)/6.Yetki Yükseltme Teknikleri/6.Yetki Yükseltme Teknikleri.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force/8.Captcha Bypass Brute Force.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force/7.Web Uygulamalarında Brute-Force.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force/7.POST Parametre Fuzzing.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force/6.GET Parametre Fuzzing.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force/5.Vhost Tarama.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/6.Subdomain Tarama",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/5.Dizin Tarama",
