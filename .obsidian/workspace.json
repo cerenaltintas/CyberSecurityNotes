@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "65588a3e76d9acb5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/11.MSFvenom.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "11.MSFvenom"
-            }
-          },
-          {
             "id": "7eb2b9554305f187",
             "type": "leaf",
             "state": {
@@ -39,14 +25,185 @@
             "id": "c94e8ecc6207d62f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/2.Genel Bakış.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Yeni sekme"
+              "title": "2.Genel Bakış"
+            }
+          },
+          {
+            "id": "ed0ee57de55ca20c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/3.Host Keşfi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.Host Keşfi"
+            }
+          },
+          {
+            "id": "7d711493090fc2e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/4.Port Tarama.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "4.Port Tarama"
+            }
+          },
+          {
+            "id": "138063c29b8559ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/5.TCP SYN (Stealth) Tarama (-sS).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5.TCP SYN (Stealth) Tarama (-sS)"
+            }
+          },
+          {
+            "id": "a37d0a73ae8f446e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/6.TCP Connect Tarama (-sT).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6.TCP Connect Tarama (-sT)"
+            }
+          },
+          {
+            "id": "629f4b3903d5ae3c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/7.UDP Tarama (-sU).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "7.UDP Tarama (-sU)"
+            }
+          },
+          {
+            "id": "53d98409dcf31432",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/8.TCP FIN, NULL ve Xmas Tarama (-sF, -sN, -sX).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "8.TCP FIN, NULL ve Xmas Tarama (-sF, -sN, -sX)"
+            }
+          },
+          {
+            "id": "a55f187b459b0d5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/9.TCP ACK Tarama (-sA).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "9.TCP ACK Tarama (-sA)"
+            }
+          },
+          {
+            "id": "c280d27b2c481650",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/10.TCP Idle Tarama (-sI).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "10.TCP Idle Tarama (-sI)"
+            }
+          },
+          {
+            "id": "928aa083fdcff819",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/11.Zamanlama Şablonları (Timing Templates) (-T).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "11.Zamanlama Şablonları (Timing Templates) (-T)"
+            }
+          },
+          {
+            "id": "9c90b0748fff4bbd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/12.Servis Versiyon Tespiti.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "12.Servis Versiyon Tespiti"
+            }
+          },
+          {
+            "id": "2a89b732e268ebb9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/13.İşletim Sistemi Tespiti.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "13.İşletim Sistemi Tespiti"
+            }
+          },
+          {
+            "id": "d05a1dbc352696c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/14.Nmap Scripting Engine (NSE).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "14.Nmap Scripting Engine (NSE)"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +260,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 491.5
+    "width": 491.5,
+    "collapsed": true
   },
   "right": {
     "id": "6979ccb01ba2db03",
@@ -251,8 +409,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c94e8ecc6207d62f",
+  "active": "7eb2b9554305f187",
   "lastOpenFiles": [
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/14.Nmap Scripting Engine (NSE).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/13.İşletim Sistemi Tespiti.md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/12.Servis Versiyon Tespiti.md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/11.Zamanlama Şablonları (Timing Templates) (-T).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/10.TCP Idle Tarama (-sI).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/9.TCP ACK Tarama (-sA).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/8.TCP FIN, NULL ve Xmas Tarama (-sF, -sN, -sX).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/7.UDP Tarama (-sU).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/6.TCP Connect Tarama (-sT).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/5.TCP SYN (Stealth) Tarama (-sS).md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/4.Port Tarama.md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/3.Host Keşfi.md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/2.Genel Bakış.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/1.Giriş.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/3.Metasploit Framework Kullanımı.md",
     "CAPT (Certified Associate Penetration Tester)/CAPT (Certified Associate Penetration Tester).md",
@@ -267,21 +438,8 @@
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection/3.SQL Temelleri.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection/2.Veri Tabanları.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection/1.Giriş.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/5.Web Uygulama Güvenliği.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/8.XSS Zafiyeti Tarama Araçları.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/8.Cross-site Scripting (XSS).md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/7.Oturum Ele Geçirme Saldırısı (Session Hijacking Attack).md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/6.Sık Kullanılan XSS Payload Listesi.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/5.Blind XSS (Kör XSS).md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/4.DOM-based XSS (DOM Tabanlı XSS).md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/3.Stored XSS (Kalıcı XSS).md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/2.Reflected XSS (Kalıcı Olmayan XSS).md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)/1.Giriş.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/8.Cross-site Scripting (XSS)",
-    "CAPT (Certified Associate Penetration Tester)/6.Yetki Yükseltme Teknikleri/6.Yetki Yükseltme Teknikleri.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force/8.Captcha Bypass Brute Force.md",
-    "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force/7.Web Uygulamalarında Brute-Force.md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/7.Web Uygulamalarında Brute-Force",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/6.Subdomain Tarama",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/5.Dizin Tarama",
