@@ -203,7 +203,8 @@
               "title": "14.Nmap Scripting Engine (NSE)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -409,8 +410,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7eb2b9554305f187",
+  "active": "c94e8ecc6207d62f",
   "lastOpenFiles": [
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/1.Giriş.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/14.Nmap Scripting Engine (NSE).md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/13.İşletim Sistemi Tespiti.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/12.Servis Versiyon Tespiti.md",
@@ -424,7 +426,6 @@
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/4.Port Tarama.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/3.Host Keşfi.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/2.Genel Bakış.md",
-    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/1.Giriş.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/3.Metasploit Framework Kullanımı.md",
     "CAPT (Certified Associate Penetration Tester)/CAPT (Certified Associate Penetration Tester).md",
     "CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/9.SQL Injection/9.SQL Injection'dan Korunma Yöntemleri.md",
