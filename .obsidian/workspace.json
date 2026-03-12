@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/11.Tiger Write-up/Tiger Write-up.md",
+                "file": "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/12.Mount Write-up/Mount Write-up.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tiger Write-up"
+              "title": "Mount Write-up"
             }
           }
         ]
@@ -231,9 +231,12 @@
   },
   "active": "096949b8f2801728",
   "lastOpenFiles": [
-    "11b4258ab71944e2a476fc3c5613f337.pdf",
+    "ada8b9206b20465191fe683bb4dc55a5.pdf",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/4.Ağ Güvenliği ve Sızma Testi.md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/12.Mount Write-up/Mount Write-up.md",
+    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/12.Mount Write-up",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/11.Tiger Write-up/Tiger Write-up.md",
+    "11b4258ab71944e2a476fc3c5613f337.pdf",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/11.Tiger Write-up",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/10.Query Gate Write-up/Query Gate Write-up.md",
     "82b3c17088d740b99f5a3bfd59b5ef53.pdf",
@@ -249,8 +252,6 @@
     "f1ac79b6e79144739247678bbc2d2907.pdf",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/6.Reddict Write-up/6.Reddict Write-up.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/5.File Hunter Write-up/5.File Hunter Write-up.md",
-    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/7.007 Write-up",
-    "22ec5bc1580545f9afda8706332bbee6.pdf",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/4.Arrow Write-up/4.Arrow Write-up.md",
     "Başlıksız.canvas",
     "2026-03-09.md",
@@ -267,7 +268,6 @@
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/2.MSFConsole.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/1.Giriş.md",
     "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/13.İşletim Sistemi Tespiti.md",
-    "CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/2.Nmap ile Ağ Tarama/12.Servis Versiyon Tespiti.md",
     "Pasted image 20260301200128.png",
     "Pasted image 20260301200121.png",
     "Pasted image 20260301200043.png",
