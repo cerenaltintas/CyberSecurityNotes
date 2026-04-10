@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/1.Giriş.md",
+                "file": "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/2.Whois.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Giriş"
+              "title": "2.Whois"
             }
           }
         ],
@@ -248,8 +248,13 @@
   },
   "active": "f72c6bd8cc513907",
   "lastOpenFiles": [
-    "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/10.Bulut Mimarisi.md",
+    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/6..md",
+    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/5..md",
+    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/4..md",
+    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/3..md",
+    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/2.Whois.md",
     "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/1.Giriş.md",
+    "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/10.Bulut Mimarisi.md",
     "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama",
     "Web Uygulama Güvenliği/Web Temelleri/Başlıksız.md",
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/9.Güvenlik ve Performans.md",
@@ -279,11 +284,6 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/4.Ağ Güvenliği ve Sızma Testi.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/11.Tiger Write-up/Tiger Write-up.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/10.Query Gate Write-up/Query Gate Write-up.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/9.Carnival Write-up/Carnival Write-up.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/8.Secure Command Write-up/Secure Command Write-up.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/11.MSFvenom.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/7.007 Write-up/7.007 Write-up.md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/6.Reddict Write-up/6.Reddict Write-up.md",
     "Başlıksız 2/Başlıksız.canvas",
     "Başlıksız 2/Pasted image 20260301200128.png",
     "Başlıksız 2/Pasted image 20260301200121.png",
