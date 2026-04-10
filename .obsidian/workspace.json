@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/3.Domain Name System (DNS).md",
+                "file": "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/4.Hypertext Transfer Protocol (HTTP).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.Domain Name System (DNS)"
+              "title": "4.Hypertext Transfer Protocol (HTTP)"
             }
           }
         ],
@@ -248,8 +248,9 @@
   },
   "active": "f72c6bd8cc513907",
   "lastOpenFiles": [
-    "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/2.İstemci ve Sunucu Modeli.md",
     "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/3.Domain Name System (DNS).md",
+    "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/4.Hypertext Transfer Protocol (HTTP).md",
+    "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/2.İstemci ve Sunucu Modeli.md",
     "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/1.Giriş.md",
     "Web Uygulama Güvenliği/Web Temelleri/4.Hypertext Transfer Protocol (HTTP).md",
     "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır",
@@ -284,7 +285,6 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/10.Meterpreter.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/9.Evasion.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/8.Nops (No Operations).md",
-    "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/3.Metasploit Framework Kullanımı/7.Kodlayıcılar (Encoder).md",
     "Başlıksız 2/Pasted image 20260301200128.png",
     "Başlıksız 2/Pasted image 20260301200121.png",
     "Başlıksız 2/Pasted image 20260301200043.png",
