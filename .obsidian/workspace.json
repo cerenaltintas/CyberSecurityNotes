@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/9.Güvenlik ve Performans.md",
+                "file": "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/10.Bulut Mimarisi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9.Güvenlik ve Performans"
+              "title": "10.Bulut Mimarisi"
             }
           }
         ],
@@ -248,8 +248,9 @@
   },
   "active": "f72c6bd8cc513907",
   "lastOpenFiles": [
-    "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/8.Web Sunucusu.md",
     "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/9.Güvenlik ve Performans.md",
+    "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/10.Bulut Mimarisi.md",
+    "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/8.Web Sunucusu.md",
     "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/7.Veri Tabanı Sunucusu.md",
     "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/6.Application Programming Interface (API).md",
     "Web Uygulama Güvenliği/Modern Web Nasıl Çalışır/5.Frontend ve Backend.md",
@@ -284,7 +285,6 @@
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/5.File Hunter Write-up/5.File Hunter Write-up.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/4.Arrow Write-up/4.Arrow Write-up.md",
     "Başlıksız 2/Başlıksız.canvas",
-    "Başlıksız 2/2026-03-09.md",
     "Başlıksız 2/Pasted image 20260301200128.png",
     "Başlıksız 2/Pasted image 20260301200121.png",
     "Başlıksız 2/Pasted image 20260301200043.png",
