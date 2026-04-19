@@ -1,4 +1,3 @@
-# Endpoint Listesi
 
 #### **DİL SEÇİM EKRANI**
 
@@ -74,10 +73,7 @@ Eğer kullanıcı kayıt olduktan sonra profil ayarlarından dilini değiştirme
 ```
 
 ---
-
-### ****
-
-                                                  **LOGIN EKRANI**
+### ***LOGIN EKRANI**
 
 **Giriş yap**
 
@@ -149,9 +145,6 @@ Response: Hatalı (Rate Limit)
 ```
 
 ---
-
-#### ****
-
 #### **TOKEN İŞLEMLERİ**
 
 Token Yenileme 
@@ -217,9 +210,6 @@ GET **`/api/v1/users/me`**
 ```
 
 ---
-
-                                             ****
-
 #### **KAYIT OL  EKRANI**
 
 **Register**
@@ -306,9 +296,6 @@ Response: Hatalı 1
 ```
 
 ---
-
-                                                    ****
-
 #### **KONUM SEÇİMİ**
 
 **Ülkeler:**
@@ -444,9 +431,6 @@ GET **`/api/v1/locations/cities/{cityId}/districts`**
 ```
 
 ---
-
-#### ****
-
 #### **ŞİFREMİ UNUTTUM**
 
 **Şifre sıfırlama isteği**
