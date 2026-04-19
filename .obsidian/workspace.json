@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/6.Meta Dosyalar.md",
+                "file": "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/7.DNS Enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6.Meta Dosyalar"
+              "title": "7.DNS Enumeration"
             }
           }
         ],
@@ -262,10 +262,11 @@
   },
   "active": "a493f3928377816e",
   "lastOpenFiles": [
+    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/6.Meta Dosyalar.md",
+    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/7.DNS Enumeration.md",
     "Başlıksız 2/8bdcb4bbfc5f4c2180b55ab51572496d.pdf",
     "Başlıksız 1/Siber Vatan 30339c236c9880da9b43ebb876f011f6.md",
     "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/5.Google Dorks.md",
-    "Web Uygulama Güvenliği/3.Web Uygulamalarında Bilgi Toplama/6.Meta Dosyalar.md",
     "Endpoint Listesi.md",
     "Başlıksız.md",
     "Başlıksız 4",
