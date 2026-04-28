@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Uygulama Güvenliği/8.Wordpress Hacking/8.WordPress Sıkılaştırma Teknikleri.md",
+                "file": "Endpoint Listesi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.WordPress Sıkılaştırma Teknikleri"
+              "title": "Endpoint Listesi"
             }
           }
         ],
@@ -260,17 +260,21 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "b3303defa3022f0e",
+  "active": "a493f3928377816e",
   "lastOpenFiles": [
-    "Web Uygulama Güvenliği/15.Unrestricted File Upload",
-    "Web Uygulama Güvenliği/14.Insecure Direct Object Reference (IDOR)",
-    "Web Uygulama Güvenliği/13.NoSQL Injection",
-    "Web Uygulama Güvenliği/12.SQLMap Kullanımı",
-    "Web Uygulama Güvenliği/11.SQL Injection",
-    "Web Uygulama Güvenliği/10.Cross-site Scripting (XSS)",
-    "Web Uygulama Güvenliği/9.Joomla Hacking",
-    "Web Uygulama Güvenliği/8.Wordpress Hacking/7.WPScan Enumeration.md",
     "Web Uygulama Güvenliği/8.Wordpress Hacking/8.WordPress Sıkılaştırma Teknikleri.md",
+    "Başlıksız.md",
+    "Web Uygulama Güvenliği/25.Race Condition",
+    "Web Uygulama Güvenliği/24.Broken Authentication",
+    "Web Uygulama Güvenliği/23.JWT Zafiyetleri",
+    "Web Uygulama Güvenliği/22.Cross-Site Request Forgery (CSRF)",
+    "Web Uygulama Güvenliği/21.Server-Side Request Forgery (SSRF)",
+    "Web Uygulama Güvenliği/20.Server-Side Template Injection (SSTI)",
+    "Web Uygulama Güvenliği/19.XML External Entity (XXE) Injection",
+    "Web Uygulama Güvenliği/18.WAF Atlatma Teknikleri",
+    "Web Uygulama Güvenliği/17.File Inclusion (LFI-RFI)",
+    "Web Uygulama Güvenliği/16.Command Injection",
+    "Web Uygulama Güvenliği/8.Wordpress Hacking/7.WPScan Enumeration.md",
     "Web Uygulama Güvenliği/8.Wordpress Hacking/6.WPScan.md",
     "Web Uygulama Güvenliği/8.Wordpress Hacking/5.Kullanıcılar Hakkında Bilgi Toplama.md",
     "Web Uygulama Güvenliği/8.Wordpress Hacking/4.Eklenti ve Temalar Hakkında Bilgi Toplama.md",
@@ -278,7 +282,6 @@
     "Web Uygulama Güvenliği/8.Wordpress Hacking/2.WordPress'in Yapısı.md",
     "Web Uygulama Güvenliği/8.Wordpress Hacking/1.Giriş.md",
     "Web Uygulama Güvenliği/7.Burp Suite Kullanımı/13.Extensions.md",
-    "Web Uygulama Güvenliği/8.Wordpress Hacking",
     "Web Uygulama Güvenliği/7.Burp Suite Kullanımı/12.Organizer.md",
     "Web Uygulama Güvenliği/7.Burp Suite Kullanımı/11.Logger.md",
     "Web Uygulama Güvenliği/7.Burp Suite Kullanımı/10.Comparer.md",
@@ -292,12 +295,9 @@
     "Web Uygulama Güvenliği/7.Burp Suite Kullanımı/2.Kurulum.md",
     "Web Uygulama Güvenliği/7.Burp Suite Kullanımı/1.Giriş.md",
     "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/8.Captcha Bypass Brute Force.md",
-    "Web Uygulama Güvenliği/7.Burp Suite Kullanımı",
     "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/7.POST Parametre Fuzzing.md",
     "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/6.GET Parametre Fuzzing.md",
     "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/5.Vhost Tarama.md",
-    "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force",
-    "Web Uygulama Güvenliği/5.Subdomain Tarama",
     "Başlıksız 2/Başlıksız.canvas",
     "Başlıksız 2/Pasted image 20260301200128.png",
     "Başlıksız 2/Pasted image 20260301200121.png",
