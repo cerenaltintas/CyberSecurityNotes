@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Uygulama Güvenliği/4.Dizin Tarama/4.Feroxbuster.md",
+                "file": "Web Uygulama Güvenliği/4.Dizin Tarama/6.FFUF - Dizin Fuzzing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.Feroxbuster"
+              "title": "6.FFUF - Dizin Fuzzing"
             }
           }
         ],
@@ -262,8 +262,10 @@
   },
   "active": "a493f3928377816e",
   "lastOpenFiles": [
-    "Web Uygulama Güvenliği/4.Dizin Tarama/3.Gobuster.md",
+    "Web Uygulama Güvenliği/4.Dizin Tarama/5.Dirb.md",
+    "Web Uygulama Güvenliği/4.Dizin Tarama/6.FFUF - Dizin Fuzzing.md",
     "Web Uygulama Güvenliği/4.Dizin Tarama/4.Feroxbuster.md",
+    "Web Uygulama Güvenliği/4.Dizin Tarama/3.Gobuster.md",
     "Web Uygulama Güvenliği/4.Dizin Tarama/2.Manuel Keşif.md",
     "Web Uygulama Güvenliği/4.Dizin Tarama/1.Giriş.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/5.Dizin Tarama/2.Manuel Keşif.md",
@@ -291,8 +293,6 @@
     "Web Uygulama Güvenliği/Web Temelleri/Başlıksız.md",
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/9.Güvenlik ve Performans.md",
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/8.Web Sunucusu.md",
-    "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/7.Veri Tabanı Sunucusu.md",
-    "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/6.Application Programming Interface (API).md",
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır",
     "Başlıksız 2/9ee517d125294d038dfdf04a6a1809fc (1).pdf",
     "Web Uygulama Güvenliği/Web Temelleri/Giriş",
