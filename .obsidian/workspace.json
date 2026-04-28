@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Uygulama Güvenliği/4.Dizin Tarama/2.Manuel Keşif.md",
+                "file": "Web Uygulama Güvenliği/4.Dizin Tarama/3.Gobuster.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.Manuel Keşif"
+              "title": "3.Gobuster"
             }
           }
         ],
@@ -262,8 +262,9 @@
   },
   "active": "a493f3928377816e",
   "lastOpenFiles": [
-    "Web Uygulama Güvenliği/4.Dizin Tarama/1.Giriş.md",
     "Web Uygulama Güvenliği/4.Dizin Tarama/2.Manuel Keşif.md",
+    "Web Uygulama Güvenliği/4.Dizin Tarama/3.Gobuster.md",
+    "Web Uygulama Güvenliği/4.Dizin Tarama/1.Giriş.md",
     "HackViser/CAPT (Certified Associate Penetration Tester)/5.Web Uygulama Güvenliği/5.Dizin Tarama/2.Manuel Keşif.md",
     "Web Uygulama Güvenliği/4.Dizin Tarama",
     "HackViser/CAPT (Certified Associate Penetration Tester)/4.Ağ Güvenliği ve Sızma Testi/1.Ağ Temelleri/9.Protokoller ve Port.md",
@@ -292,7 +293,6 @@
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/7.Veri Tabanı Sunucusu.md",
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/6.Application Programming Interface (API).md",
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/5.Frontend ve Backend.md",
-    "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır/4.Hypertext Transfer Protocol (HTTP).md",
     "Web Uygulama Güvenliği/2.Modern Web Nasıl Çalışır",
     "Başlıksız 2/9ee517d125294d038dfdf04a6a1809fc (1).pdf",
     "Web Uygulama Güvenliği/Web Temelleri/Giriş",
