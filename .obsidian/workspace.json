@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Endpoint Listesi.md",
+                "file": "Web Uygulama Güvenliği/8.Wordpress Hacking/3.WordPress Çekirdek Versiyonu Hakkında Bilgi Toplama.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Endpoint Listesi"
+              "title": "3.WordPress Çekirdek Versiyonu Hakkında Bilgi Toplama"
             }
           }
         ],
@@ -262,6 +262,7 @@
   },
   "active": "a493f3928377816e",
   "lastOpenFiles": [
+    "Endpoint Listesi.md",
     "Web Uygulama Güvenliği/8.Wordpress Hacking/8.WordPress Sıkılaştırma Teknikleri.md",
     "Başlıksız.md",
     "Web Uygulama Güvenliği/25.Race Condition",
@@ -297,7 +298,6 @@
     "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/8.Captcha Bypass Brute Force.md",
     "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/7.POST Parametre Fuzzing.md",
     "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/6.GET Parametre Fuzzing.md",
-    "Web Uygulama Güvenliği/6.Web Uygulamalarında Brute-Force/5.Vhost Tarama.md",
     "Başlıksız 2/Başlıksız.canvas",
     "Başlıksız 2/Pasted image 20260301200128.png",
     "Başlıksız 2/Pasted image 20260301200121.png",
